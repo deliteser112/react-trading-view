@@ -1,0 +1,43 @@
+* {
+  background-color: rgb(20, 19, 36);
+}
+
+.tradingview-widget-copyright {
+  display: none;
+}
+
+.hoverData {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  background-color: transparent;
+}
+.onChainChart {
+  max-width: 300px;
+}
+
+.addressHover {
+  max-width: 50%;
+  border: 0.5px solid white;
+}
+
+.charty {
+  display: flex;
+  width: 97.5%;
+  flex-direction: row;
+}
+.taChart {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+}
+.chart-data {
+  color: white;
+}
+.dataRequest {
+  color: white;
+}
+
+.chart-data {
+  color: white;
+}
