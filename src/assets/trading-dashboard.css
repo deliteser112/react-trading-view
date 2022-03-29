@@ -1,0 +1,140 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.trade-button {
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #b8a5bb;
+    transition: all .4s;
+}
+
+.trade-button:hover {
+    cursor: pointer;
+    background-color: wheat;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+
+.table-container {
+    padding: 10px;
+}
+
+.trade-row>div {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.left-trade .table-header {
+    display: grid;
+    grid-template-columns: 8.5% 15.5% 8.5% 12.5% 12% 9% 11.5% 11% 11.5%;
+    margin: 0;
+    min-width: 530px;
+    text-align: left;
+    width: 100%!important;
+}
+
+.left-trade .table-body {
+    position: relative;
+    height: 850px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    will-change: transform;
+    direction: ltr;
+}
+
+.left-trade .trade-row {
+    display: grid;
+    grid-template-columns: 8.5% 15.5% 8.5% 12.5% 12% 9% 11.5% 11% 11.5%;
+    margin: 0;
+    min-width: 530px;
+    text-align: left;
+    width: 100%!important;
+}
+
+.right-trade .table-header {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%!important;
+    margin: 0;
+    min-width: 530px;
+    text-align: left;
+    width: 100%!important;
+}
+
+.right-trade .trade-row {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%!important;
+    margin: 0;
+    min-width: 530px;
+    text-align: left;
+    width: 100%!important;
+}
+
+.option-style {
+    background-color: white;
+    padding: 10px 20px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.footer {
+    border-top: 1px solid lightgrey;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: auto;
+    margin: 5px 10px;
+}
+
+.p-2 {
+    padding: 10px;
+    line-height: 2;
+    font-size: 16px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.tc-primary {
+    color: #839bec;
+}
+
+.tc-success {
+    color: #008550;
+}
+
+.tc-danger {
+    color: #d34a4a;
+}
+/*  responsive */
+
+@media only screen and (min-width: 1401px) {
+    .all-trades-container {
+        margin: auto;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        max-width: 1140px;
+    }
+}

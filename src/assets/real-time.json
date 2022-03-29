@@ -1,0 +1,76 @@
+{
+    "crypto": ["AAVE/USD","ADA/USD","ALGO/USD","AXS/USD","BAT/USD","BCH/USD","BNB/USD","BNT/USD","BTC/USD","COMP/USD","CRV/USD","DASH/USD","DOT/USD","ENJ/USD","EOS/USD","ETC/USD","ETH/USD","GRT/USD","HBAR/USD","ICP/USD","LINK/USD","LTC/USD"],
+    "forex": ["AUD/USD", "EUR/CHF", "EUR/GBP", "EUR/JPY", "EUR/USD", "GBP/USD", "NZD/USD", "USD/CAD", "USD/CHF", "USD/JPY"],
+    "leaderboard": [
+        {
+            "grade": "🥇",
+            "addr": "D0AE",
+            "trades": "1",
+            "winrate": "100%",
+            "pnl": "8240.34"
+        },
+        {
+            "grade": "🥈",
+            "addr": "21c0",
+            "trades": "3",
+            "winrate": "66.6%",
+            "pnl": "5819.86"
+        },
+        {
+            "grade": "🥉",
+            "addr": "1884",
+            "trades": "11",
+            "winrate": "60%",
+            "pnl": "673.21"
+        },
+        {
+            "grade": "4",
+            "addr": "DEA4",
+            "trades": "4",
+            "winrate": "100%",
+            "pnl": "207.16"
+        },
+        {
+            "grade": "5",
+            "addr": "E495",
+            "trades": "8",
+            "winrate": "71.4%",
+            "pnl": "200.04"
+        },
+        {
+            "grade": "6",
+            "addr": "350A",
+            "trades": "1",
+            "winrate": "100%",
+            "pnl": "142.98"
+        },
+        {
+            "grade": "7",
+            "addr": "EAAD",
+            "trades": "3",
+            "winrate": "100%",
+            "pnl": "133.07"
+        },
+        {
+            "grade": "8",
+            "addr": "926E",
+            "trades": "15",
+            "winrate": "40.4%",
+            "pnl": "89.09"
+        },
+        {
+            "grade": "9",
+            "addr": "6544",
+            "trades": "42",
+            "winrate": "100%",
+            "pnl": "36.73"
+        },
+        {
+            "grade": "10",
+            "addr": "427A",
+            "trades": "76",
+            "winrate": "0%",
+            "pnl": "-13.21"
+        }
+    ]
+}

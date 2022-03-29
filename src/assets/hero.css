@@ -1,0 +1,393 @@
+::-webkit-scrollbar {
+    border-radius: 1px;
+    height: 4px;
+    width: 4px;
+}
+
+::-webkit-scrollbar-corner {
+    background: #9c9c9c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,#bcbcc8,#b0b0bf 33%),#bcbcc8;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(180deg,rgba(173, 173, 173, 0.05),hsla(0,0%,100%,0)),linear-gradient(0deg,#7b7b80,#1c1c22),#c4c4c4;
+    border-radius: 1px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+body {
+    background: white;
+    margin: auto;
+}
+
+h4 {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+}
+
+span {
+    font-size: 14px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Navbar section */
+.navbar {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    background: none;
+    /* background-color: #09090b50; */
+    background-color: white;
+    border: 1px solid #e2e2e2;
+    box-shadow: 2px 2px 15px #cfc7c7;
+    margin: 0 auto;
+    padding: 8px 40px;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.logo-image {
+    width: 40px;
+}
+
+.logo-text {
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: -4px;
+    font-family: sans-serif;
+    margin-left: 1rem;
+}
+
+.menu-link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    transition: .1s;
+    width: auto;
+    text-decoration: none;
+    padding: 20px 15px;
+    font-family: sans-serif;
+    color: rgb(26, 26, 26);
+}
+
+.menu-link:hover {
+    color: black;
+}
+
+.menu-btns {
+    display: flex;
+}
+
+.menu-btns>li {
+    list-style: none;
+}
+
+.button {
+    background-color: rgba(71, 58, 111, 1);
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-right: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none !important;
+    transition: all .4s;
+}
+
+.button:hover {
+    background: #4a0a55;
+    color: white;
+}
+
+.button.btn-pink {
+    background-color: #d20067;
+}
+
+.button.btn-pink:hover {
+    background-color: #9e024e;
+}
+
+.menu-btns>li>a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trading-panel {
+    /* height: 580px; */
+    justify-content: flex-end;
+    margin: 20px 0 0;
+    width: 100%;
+}
+
+
+.chart {
+    margin-right: 20px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 2px 2px 15px #cfc7c7;
+    border-radius: 10px;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* Long Short Panel */
+.long-short-panel {
+    background-color: white;
+    border: 1px solid #e2e2e2;
+    box-shadow: 2px 2px 15px #cfc7c7;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.tab-item {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.tab-item>li {
+    padding: 10px 0;
+    width: 49%;
+    text-align: center;
+    background: rgba(244, 244, 244, 1);
+    font-family: sans-serif;
+    transition: all .4s;
+}
+
+.tab-item>li:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tab-item>li:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.tab-item>li.active {
+    background-color: #6e147d;
+    color: white;
+}
+
+.tab-item>li:hover {
+    cursor: pointer;
+    background-color: #f18dbf;
+}
+.tab-panel {
+    text-align: center;
+}
+
+.tab-panel .slider {
+    width: 100%;
+    display: block;
+    background: transparent;
+    overflow: visible;
+}
+
+.slider-title {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.trailing-section {
+    background-color: #F4F4F4;
+    padding: 5px 10px 5px ;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.badge-items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge {
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    min-width: 70px;
+}
+
+.badge.red {
+    background-color: #DD1818;
+    color: white;
+}
+
+.badge.grey {
+    background-color: #DCDCDC;
+    color: black;
+}
+
+.badge.green {
+    background-color: #AADEAC;
+    color: black;
+}
+
+.badge-items .active {
+    border-bottom: 2px solid rgba(76, 175, 80, 1);
+}
+
+.reg-circle-icon {
+    position: relative;
+    top: 2px;
+}
+
+.open-price {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.invoice-list {
+    list-style: none;
+    padding: 0;
+    padding: 5px 15px;
+}
+
+.invoice-list>li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.invoice-list>li>span:last-child {
+    font-weight: bold;
+}
+
+.connect-wallet {
+    color: white;
+    background-color: rgba(71, 58, 111, 1);
+}
+
+.connect-wall-button {
+    padding-bottom: 25px;
+}
+
+/* Crypto Forex Panel */
+
+.crypto-forex-panel {
+    left: 0;
+    position: absolute;
+    transition: .6s;
+    width: 250px;
+    z-index: 2;
+    background-color: white;
+    border: 1px solid #e2e2e2;
+    box-shadow: 2px 2px 15px #cfc7c7;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.search-bar:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(225 225 225);
+    padding: 5px 0;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 5px;
+}
+
+.table-row span {
+    font-size: 10px;
+    font-size: 13px;
+}
+
+.table-row span:first-child {
+    width: 34%;
+}
+
+.table-row span:last-child {
+    width: 30%;
+    text-align: center;
+}
+
+.table-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 470px;
+}
+
+.crypto-forex-panel .tab-item {
+    padding: 0 5px;
+}
+
+
+.rising-color {
+    color: rgb(48 139 103)
+}
+
+.fall-color {
+    color: #d34a4a
+}
+
+/*  responsive */
+
+
+@media only screen and (min-width: 1401px) {
+    .trading-panel {
+        padding-right: 15px;
+    }
+    .trading-panel .long-short-panel {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+    .chart {
+        flex-basis: calc(80% - 290px);
+    }
+}

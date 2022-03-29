@@ -1,0 +1,120 @@
+.trading-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #e2e2e2;
+    box-shadow: 2px 2px 15px #cfc7c7;
+    border: 1px solid #cbcbcb;
+    border-radius: 10px;
+}
+
+.card-header {
+    padding: 12px;
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #cbcbcb;
+    background-color: #e3e3e3;
+}
+
+.card-header p {
+    margin: 4px;
+}
+
+.display-lines {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+}
+
+.empty-row {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.trade-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-img {
+    width: 30px;
+}
+
+.title-section {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    padding: 0 20px!important;
+}
+
+.title-section h1 {
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(45deg,#3deca7,#10a4cc);
+    -webkit-background-clip: text;
+    font-size: 3em;
+    font-weight: 600!important;
+    letter-spacing: 2px!important;
+    margin-bottom: 8px!important;
+    text-transform: uppercase;
+}
+
+.stats-24h {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pd-35 {
+    width: auto;
+    padding: 30px 10px 25px;
+}
+
+.card-title {
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+}
+
+.card-subtitle {
+    text-align: center;
+}
+
+.m-3 {
+    margin: 1rem;
+}
+
+.central-link {
+    text-align: center;
+}
+
+/*  responsive */
+
+@media only screen and (min-width: 1401px) {
+    .open-orders {
+        flex-basis: 20%!important;
+        max-width: 20%!important;
+    }
+
+    .open-trades {
+        flex-basis: calc(80% - 20px)!important;
+        max-width: 80%!important;
+    }
+
+    .stats-24h .d-flex {
+        display: grid!important;
+        grid-auto-columns: 3fr 4fr 4fr 3fr;
+        grid-auto-flow: column;
+    }
+}
