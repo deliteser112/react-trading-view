@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import {FaChevronRight, FaChevronLeft} from "react-icons/fa"
 
 import {crypto, forex} from "../assets/real-time.json";
 
@@ -7,6 +8,8 @@ function Navbar() {
     const [forexData, setForexData] = useState([]);
     const [vcrypto, setCrypto] = useState(true);
     const [vforex, setForex] = useState(false);
+
+    const [isShow, setIsShow] = useState(true);
 
     useEffect(() => {
         setTimeout(() => {
@@ -51,35 +54,42 @@ function Navbar() {
     }
 
     return (
-        <div className="crypto-forex-panel">
-            <ul className="tab-item">
-                <li className={vcrypto ? 'active' : ''} onClick={() => handleTab('crypto')}>Crypto</li>
-                <li className={vforex ? 'active' : ''} onClick={() => handleTab('forex')}>Forex</li>
-            </ul>
-            <input type="text" className="search-bar" placeholder="Search a specific pair..." />
-            <div className="crypto-forex-tab-panel">
-                <div className="table-header">
-                    <span>PAIR</span>
-                    <span>PRICE</span>
-                    <span>24H</span>
+        <div>
+            <div className={`crypto-forex-panel ${isShow?'show':'hide'}`}>
+                <ul className="tab-item">
+                    <li className={vcrypto ? 'active' : ''} onClick={() => handleTab('crypto')}>Crypto</li>
+                    <li className={vforex ? 'active' : ''} onClick={() => handleTab('forex')}>Forex</li>
+                </ul>
+                <input type="text" className="search-bar" placeholder="Search a specific pair..." />
+                <div className="crypto-forex-tab-panel">
+                    <div className="table-header">
+                        <span>PAIR</span>
+                        <span>PRICE</span>
+                        <span>24H</span>
+                    </div>
+                    <div className="table-content">
+                        {vcrypto && cryptoData.map((item, index) => 
+                            <div className="table-row" key={index}>
+                                <span>{item.pair}</span>
+                                <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
+                                <span className="rising-color">{item.hour}</span>
+                            </div>
+                        )}
+                        {vforex && forexData.map((item, index) => 
+                            <div className="table-row" key={index}>
+                                <span>{item.pair}</span>
+                                <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
+                                <span className="rising-color">{item.hour}</span>
+                            </div>
+                        )}
+                        
+                    </div>
                 </div>
-                <div className="table-content">
-                    {vcrypto && cryptoData.map((item, index) => 
-                        <div className="table-row" key={index}>
-                            <span>{item.pair}</span>
-                            <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
-                            <span className="rising-color">{item.hour}</span>
-                        </div>
-                    )}
-                    {vforex && forexData.map((item, index) => 
-                        <div className="table-row" key={index}>
-                            <span>{item.pair}</span>
-                            <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
-                            <span className="rising-color">{item.hour}</span>
-                        </div>
-                    )}
-                    
-                </div>
+            </div>
+            
+
+            <div className="mobile-crypto-view" onClick={() => setIsShow(!isShow)}>
+                {isShow ? <FaChevronLeft /> : <FaChevronRight />}
             </div>
         </div>
     );

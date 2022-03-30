@@ -297,6 +297,10 @@ span {
     margin: 5px 0;
 }
 
+.slider-value {
+    display: flex;
+    justify-content: space-around;
+}
 .trailing-section {
     background-color: #F4F4F4;
     padding: 5px 10px 5px ;
@@ -344,13 +348,29 @@ span {
 }
 
 .open-price {
-    padding: 24px;
+    margin-top: 5px;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
     background-color: white;
+    align-items: center;
 }
 
+.leverage-value {
+    background-color: white;
+    border: none;
+    text-align: center;
+}
+
+.leverage-value:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.change-value:hover {
+    color: #6e147d;
+    cursor:pointer;
+}
 .invoice-list {
     list-style: none;
     padding: 0;
@@ -376,6 +396,7 @@ span {
     padding-bottom: 25px;
 }
 
+/* ------------------------------------------------------ */
 /* Crypto Forex Panel */
 
 .crypto-forex-panel {
@@ -389,8 +410,16 @@ span {
     box-shadow: 2px 2px 15px #cfc7c7;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    display: none;
     transition: all .4s;
+    transform: translateX(-100%);
+}
+
+.crypto-forex-panel.show {
+    transform: translateX(0%);
+}
+
+.crypto-forex-panel.hide {
+    transform: translateX(-100%);
 }
 
 .search-bar {
@@ -454,6 +483,21 @@ span {
     overflow: auto;
 }
 
+.mobile-crypto-view {
+    background-color: #0000009c;
+    position: absolute;
+    top: 30%;
+    left: -1px;
+    transform: translate(0, -50%);
+    padding: 20px 10px;
+    border-radius: 0 30px 30px 0;
+    color: white;
+    z-index: 2;
+}
+
+.mobile-crypto-view:hover {
+    cursor: pointer;
+}
 
 
 /*  responsive */
@@ -468,7 +512,10 @@ span {
     }
     
     .crypto-forex-panel {
-        display: block;
+        transform: translateX(0%) !important;
+    }
+    .mobile-crypto-view {
+        display: none;
     }
 }
 
@@ -477,11 +524,11 @@ span {
         padding-right: 15px;
     }
     .trading-panel .long-short-panel {
-        flex-basis: 30%;
-        max-width: 30%;
+        flex-basis: 25%;
+        max-width: 25%;
     }
     .chart {
-        flex-basis: calc(70% - 290px);
+        flex-basis: calc(75% - 290px);
     }
     .navbar-menu {
         display: block;

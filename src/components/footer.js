@@ -4,7 +4,7 @@ import {FaTelegram, FaTwitter, FaMedium, FaDiscord, FaRedditAlien} from "react-i
 function Footer() {
     return (
         <div className="footer">
-            <p className="central-link">LVRJ is a product developed by Ahmed.</p>
+            <p className="central-link">LVRJ is a product developed by Trading view.</p>
             <div className="social-link">
                 <FaTelegram className="social-icon" />
                 <FaTwitter className="social-icon"  />

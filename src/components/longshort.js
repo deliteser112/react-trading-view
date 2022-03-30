@@ -6,9 +6,10 @@ import ArrowUp from '../assets/arrow-up.svg';
 import ArrowDown from '../assets/arrow-down.svg';
 
 function LongShort() {
-    const [value, setValue] = useState(20);
+    const [value, setValue] = useState(10);
     const [short, setShort] = useState(false);
     const [long, setLong] = useState(true);
+    const [leverage, setLeverage] = useState(1034.34);
 
     const handleTab = (isSelected) => {
         if(isSelected === 'long') {
@@ -20,6 +21,10 @@ function LongShort() {
         }
     }
 
+    const handleSlider = (e) => {
+        setValue(e.target.value)
+    }
+
     return (
         <div className="long-short-panel">
             <ul className="tab-item">
@@ -28,7 +33,12 @@ function LongShort() {
             </ul>
             <div className="tab-panel">
                 <h4 className="slider-title">Leverage Slider</h4>
-                <input type="range" id="leverage" min="5" max="150" step="1" className="slider" value={value} onChange={(e) => { setValue(e.target.value)}}  />
+                <input type="range" id="leverage" min="0" max="250" step="1" className="slider" value={value} onChange={(e) => {handleSlider(e)}}  />
+                <div className="slider-value">
+                    <span>0x</span>
+                    <span>{value}x</span>
+                    <span>250x</span>
+                </div>
                 <div className="trailing-section">
                     <ul className="badge-items">
                         <li className="active">
@@ -45,9 +55,9 @@ function LongShort() {
                         </li>
                     </ul>
                     <div className="open-price">
-                        <span><FaMinusCircle /></span>
-                        <span>1,034.34</span>
-                        <span><FaPlusCircle /></span>
+                        <span><FaMinusCircle className="change-value" onClick={() => setLeverage(Number((leverage-1).toFixed(2)))} /></span>
+                        <input type="text" className="leverage-value" value={leverage} onChange={(e) => setLeverage(e.target.value)} />
+                        <span><FaPlusCircle className="change-value" onClick={() => setLeverage(Number(leverage)+1)} /></span>
                     </div>
                     <p className="pos-amount">49.45% Of the Position Amount</p>
                     <hr />
