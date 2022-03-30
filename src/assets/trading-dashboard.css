@@ -1,11 +1,9 @@
-.row {
-    display: flex;
-    flex-wrap: wrap;
+.all-trades-container .row {
+    display: block;
 }
 
-.col-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+.all-trades-container .col-6 {
+    max-width: 100%;
 }
 
 .trade-button {
@@ -36,14 +34,14 @@
 
 .trade-row>div {
     padding: 10px 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .left-trade .table-header {
     display: grid;
     grid-template-columns: 8.5% 15.5% 8.5% 12.5% 12% 9% 11.5% 11% 11.5%;
     margin: 0;
-    min-width: 530px;
+    min-width: 500px;
     text-align: left;
     width: 100%!important;
 }
@@ -52,6 +50,7 @@
     position: relative;
     height: 850px;
     overflow-x: hidden;
+    min-width: 500px;
     overflow-y: auto;
     will-change: transform;
     direction: ltr;
@@ -61,7 +60,6 @@
     display: grid;
     grid-template-columns: 8.5% 15.5% 8.5% 12.5% 12% 9% 11.5% 11% 11.5%;
     margin: 0;
-    min-width: 530px;
     text-align: left;
     width: 100%!important;
 }
@@ -70,7 +68,7 @@
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%!important;
     margin: 0;
-    min-width: 530px;
+    min-width: 500px;
     text-align: left;
     width: 100%!important;
 }
@@ -79,10 +77,15 @@
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%!important;
     margin: 0;
-    min-width: 530px;
+    min-width: 500px;
     text-align: left;
     width: 100%!important;
 }
+
+.nft-orders .table-header {
+    min-width: 600px;
+}
+
 
 .option-style {
     background-color: white;
@@ -128,13 +131,22 @@
 .tc-danger {
     color: #d34a4a;
 }
+
+
 /*  responsive */
 
 @media only screen and (min-width: 1401px) {
-    .all-trades-container {
+    .all-trades-container .row {
+        display: flex;
+        flex-wrap: wrap;
         margin: auto;
         margin-top: 75px;
         margin-bottom: 75px;
         max-width: 1140px;
+    }
+
+    .all-trades-container .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }

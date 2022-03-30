@@ -1,6 +1,8 @@
 {
     "crypto": ["AAVE/USD","ADA/USD","ALGO/USD","AXS/USD","BAT/USD","BCH/USD","BNB/USD","BNT/USD","BTC/USD","COMP/USD","CRV/USD","DASH/USD","DOT/USD","ENJ/USD","EOS/USD","ETC/USD","ETH/USD","GRT/USD","HBAR/USD","ICP/USD","LINK/USD","LTC/USD"],
     "forex": ["AUD/USD", "EUR/CHF", "EUR/GBP", "EUR/JPY", "EUR/USD", "GBP/USD", "NZD/USD", "USD/CAD", "USD/CHF", "USD/JPY"],
+    "addr": ["D0AE", "EC95", "58CD", "350A"],
+    "type": ["MARKET", "SL", "LIQ"],
     "leaderboard": [
         {
             "grade": "🥇",
