@@ -126,6 +126,23 @@ span {
     margin-right: 15px;
 }
 
+.toggle-button-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+} 
+
+.toggle-button-group>span {
+    margin-right: 3px;
+    color: var(--grey3);
+}
+
+.mobile-navbar .toggle-button-group>span {
+    margin-right: 3px;
+    color: var(--light);
+}
+
 .mobile-navbar {
     position: fixed;
     top: -1px;
@@ -218,11 +235,11 @@ span {
     padding: 8px;
     cursor: pointer;
     border-radius: 40%;
-    color: var(--light);
+    color: var(--grey1);
 }
 
 .hamburger:hover {
-    background-color: var(--grey1);
+    background-color: var(--light);
 }
 
 .menu-btns>li {
@@ -581,7 +598,7 @@ span {
     }
 }
 
-@media only screen and (min-width: 1131px) {
+@media only screen and (min-width: 1270px) {
     .trading-panel {
         padding-right: 15px;
     }

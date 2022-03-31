@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import logo from '../assets/logo.png';
+import Switch from "react-switch";
 import {FaExchangeAlt, FaPowerOff, FaBars, FaTimes} from "react-icons/fa"
+import logo from '../assets/logo.png';
 
 function Navbar({ mode, setMode }) {
 
@@ -41,9 +42,12 @@ function Navbar({ mode, setMode }) {
                 </div>
             </div>
 
-            <button className="button" onClick={() => handleChangeMode(!mode)}>toggle</button>
-            
             <ul className="menu-btns">
+                <li>
+                    <div className="toggle-button-group">
+                        <span>Dark Mode</span> <Switch onChange={() => handleChangeMode(!mode)} checked={mode} />
+                    </div>
+                </li>
                 <li>
                     <a className="button btn-pink" href="/decentralized-trading/">Buy $LVRJ" <FaExchangeAlt className="reg-circle-icon" /></a>
                 </li>
@@ -64,6 +68,11 @@ function Navbar({ mode, setMode }) {
                 </li>
                 <li>
                     <a className="button btn-pink menu-link" href="/decentralized-trading/">Connect Wallet <FaPowerOff className="reg-circle-icon" /></a>
+                </li>
+                <li>
+                    <div className="toggle-button-group">
+                        <span>Dark Mode</span> <Switch onChange={() => handleChangeMode(!mode)} checked={mode} />
+                    </div>
                 </li>
             </ul>
         </div>
