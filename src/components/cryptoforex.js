@@ -61,7 +61,7 @@ function Navbar() {
                     <li className={vforex ? 'active' : ''} onClick={() => handleTab('forex')}>Forex</li>
                 </ul>
                 <input type="text" className="search-bar" placeholder="Search a specific pair..." />
-                <div className="crypto-forex-tab-panel">
+                <div>
                     <div className="table-header">
                         <span>PAIR</span>
                         <span>PRICE</span>
@@ -70,14 +70,14 @@ function Navbar() {
                     <div className="table-content">
                         {vcrypto && cryptoData.map((item, index) => 
                             <div className="table-row" key={index}>
-                                <span>{item.pair}</span>
+                                <span className="pair-color">{item.pair}</span>
                                 <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
                                 <span className="rising-color">{item.hour}</span>
                             </div>
                         )}
                         {vforex && forexData.map((item, index) => 
                             <div className="table-row" key={index}>
-                                <span>{item.pair}</span>
+                                <span className="pair-color">{item.pair}</span>
                                 <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
                                 <span className="rising-color">{item.hour}</span>
                             </div>

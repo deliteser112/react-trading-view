@@ -1,13 +1,32 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import logo from '../assets/logo.png';
 import {FaExchangeAlt, FaPowerOff, FaBars, FaTimes} from "react-icons/fa"
 
-function Navbar() {
+function Navbar({ mode, setMode }) {
 
-    const [isShow, setIsShow] = useState(false)
+    const [isShow, setIsShow] = useState(false);
+
+    useEffect(() => {
+        const r = document.querySelector(':root');
+        if (!mode) {
+            r.style.setProperty('--dark3', '#fff');
+            r.style.setProperty('--dark2', '#dddde3');
+            r.style.setProperty('--dark1', '#c7c7d1');
+            r.style.setProperty('--grey3', '#000');
+            r.style.setProperty('--grey2', '#222');
+            r.style.setProperty('--grey1', '#333');
+        }
+    }, [mode])
+
+    const handleChangeMode = (currentMode) => {
+        setMode(currentMode);
+        setTimeout(() => {
+            window.location.reload();
+        }, 100);
+    }
 
     return (
-        <div className="navbar">
+        <div className={`navbar ${mode? 'dark': 'light'}`}>
             <div className="navbar-left">
                 <div className="navbar-logo">
                     <img src={logo} alt="logo-img" className="logo-image" />
@@ -21,6 +40,8 @@ function Navbar() {
                     <a className="menu-link" href="/decentralized-trading/">Documentation</a>
                 </div>
             </div>
+
+            <button className="button" onClick={() => handleChangeMode(!mode)}>toggle</button>
             
             <ul className="menu-btns">
                 <li>

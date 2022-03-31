@@ -46,7 +46,7 @@ function LongShort() {
                             <p className="badge-title">Stop Loss</p>
                         </li>
                         <li>
-                            <p className="badge grey">X5</p>
+                            <p className="badge grey">{value}x</p>
                             <p className="badge-title">Leverage</p>
                         </li>
                         <li>

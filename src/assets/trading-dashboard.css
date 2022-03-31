@@ -7,17 +7,17 @@
 }
 
 .trade-button {
-    background-color: white;
+    background-color: var(--dark3);
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
-    border: 1px solid #b8a5bb;
+    border: 1px solid var(--border-color);
     transition: all .4s;
 }
 
 .trade-button:hover {
     cursor: pointer;
-    background-color: wheat;
+    background-color: var(--dark1);
 }
 
 .title {
@@ -88,14 +88,14 @@
 
 
 .option-style {
-    background-color: white;
+    background-color: var(--dark3);
     padding: 10px 20px;
     margin-left: 5px;
     border-radius: 5px;
 }
 
 .footer {
-    border-top: 1px solid lightgrey;
+    border-top: 1px solid var(--border-color);
     padding: 40px;
     text-align: center;
 }
@@ -108,6 +108,7 @@
     width: 40px;
     height: auto;
     margin: 5px 10px;
+    color: var(--grey3);
 }
 
 .p-2 {
@@ -130,6 +131,15 @@
 
 .tc-danger {
     color: #d34a4a;
+}
+
+
+.rising-color {
+    color: rgb(3, 129, 79)
+}
+
+.fall-color {
+    color: #d34a4a
 }
 
 
