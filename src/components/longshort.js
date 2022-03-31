@@ -5,7 +5,7 @@ import {FaRegCircle, FaMinusCircle, FaPlusCircle} from "react-icons/fa"
 import ArrowUp from '../assets/arrow-up.svg';
 import ArrowDown from '../assets/arrow-down.svg';
 
-function LongShort() {
+function LongShort({ mode }) {
     const [value, setValue] = useState(10);
     const [short, setShort] = useState(false);
     const [long, setLong] = useState(true);
@@ -39,7 +39,7 @@ function LongShort() {
                     <span>{value}x</span>
                     <span>250x</span>
                 </div>
-                <div className="trailing-section">
+                <div className={`trailing-section ${mode? '': 'not-grey'}`}>
                     <ul className="badge-items">
                         <li className="active">
                             <p className="badge red">-$58.43</p>
@@ -54,7 +54,7 @@ function LongShort() {
                             <p className="badge-title">Take Profit</p>
                         </li>
                     </ul>
-                    <div className="open-price">
+                    <div className={`open-price ${mode? '': 'not-grey'}`}>
                         <span><FaMinusCircle className="change-value" onClick={() => setLeverage(Number((leverage-1).toFixed(2)))} /></span>
                         <input type="text" className="leverage-value" value={leverage} onChange={(e) => setLeverage(e.target.value)} />
                         <span><FaPlusCircle className="change-value" onClick={() => setLeverage(Number(leverage)+1)} /></span>
@@ -63,7 +63,7 @@ function LongShort() {
                     <hr />
                     <p><FaRegCircle color="rgba(76, 175, 80, 1)" className="reg-circle-icon" /> Trailing Stop Loss</p>
                 </div>
-                <div className="trailing-section connect-wall-button">
+                <div className={`trailing-section connect-wall-button ${mode? '': 'not-grey'}`}>
                     <ul className="invoice-list">
                         <li>
                             <span>Profits In</span>

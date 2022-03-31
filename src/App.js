@@ -25,7 +25,7 @@ function App() {
       <div className="trading-panel row">
         <CryptoForex />
         <Chart mode={darkMode}/>
-        <LongShort />
+        <LongShort mode={darkMode} />
       </div>
       <div className="trading-container">
         <OpenTrads />
