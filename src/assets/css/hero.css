@@ -111,7 +111,7 @@ span {
     justify-content: space-between;
     backdrop-filter: blur(5px);
     background: none;
-    border: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     box-shadow: 2px 2px 15px var(--shadow);
     margin: 0 auto;
     padding: 8px 40px;
@@ -128,7 +128,7 @@ span {
     padding: 5px 20px 5px 10px;
     border-radius: 30px;
     color: var(--grey1);
-    background-color: var(--dark1);
+    background-color: var(--dark2);
 }
 
 .navbar-search-icon {
@@ -305,13 +305,13 @@ span {
 
 
 .chart {
-    margin-right: 20px;
     border: 1px solid var(--border-color);
     box-shadow: 2px 2px 15px var(--shadow);
     border-radius: 10px;
     flex-basis: 100%;
     min-height: 400px;
     transition: all .5s;
+    margin-bottom: 10px;
 }
 
 
@@ -749,6 +749,7 @@ span {
         display: none;
     }
     .chart {
+        margin-bottom: 0;
         min-height: 100%;
     }
     .table-content {
