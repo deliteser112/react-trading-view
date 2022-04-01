@@ -112,6 +112,7 @@ span {
     backdrop-filter: blur(5px);
     background: none;
     border-bottom: 1px solid var(--border-color);
+    border: none;
     box-shadow: 2px 2px 15px var(--shadow);
     margin: 0 auto;
     padding: 8px 40px;
@@ -124,7 +125,7 @@ span {
 .navbar-logo {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    /* margin-right: 15px; */
     padding: 5px 20px 5px 10px;
     border-radius: 30px;
     color: var(--grey1);
@@ -217,6 +218,13 @@ span {
 
 .navbar-menu {
     display: none;
+}
+
+.mobile-view-icons{
+    display: block;
+    color: var(--grey1);
+    width: 30px;
+    height: 30px;
 }
 
 .menu-link {
@@ -729,7 +737,10 @@ span {
     }
 }
 
-@media only screen and (min-width: 1270px) {
+@media only screen and (min-width: 1336px) {
+    .mobile-view-icons {
+        display: none;
+    }
     .trading-panel .long-short-panel {
         flex-basis: 25%;
         max-width: 25%;
