@@ -135,7 +135,7 @@
 
 
 .rising-color {
-    color: rgb(3, 129, 79)
+    color: var(--rising-color);
 }
 
 .fall-color {

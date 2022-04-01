@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // import styling
-import "./assets/hero.css";
-import "./assets/trading-view.css";
-import "./assets/trading-dashboard.css";
+import "./assets/css/hero.css";
+import "./assets/css/trading-view.css";
+import "./assets/css/trading-dashboard.css";
+import "./assets/css/search-input.css";
 
 // import App.js
 import App from './App';

@@ -1,6 +1,56 @@
 {
     "crypto": ["AAVE/USD","ADA/USD","ALGO/USD","AXS/USD","BAT/USD","BCH/USD","BNB/USD","BNT/USD","BTC/USD","COMP/USD","CRV/USD","DASH/USD","DOT/USD","ENJ/USD","EOS/USD","ETC/USD","ETH/USD","GRT/USD","HBAR/USD","ICP/USD","LINK/USD","LTC/USD"],
     "forex": ["AUD/USD", "EUR/CHF", "EUR/GBP", "EUR/JPY", "EUR/USD", "GBP/USD", "NZD/USD", "USD/CAD", "USD/CHF", "USD/JPY"],
+    "people": [
+        {
+            "img_url": "/avatars/avatar_1.jpg",
+            "name": "TradingView"
+        },
+        {
+            "img_url": "/avatars/avatar_2.jpg",
+            "name": "transparent-fx"
+        },
+        {
+            "img_url": "/avatars/avatar_3.jpg",
+            "name": "Yuriy_Bishko"
+        },
+        {
+            "img_url": "/avatars/avatar_4.jpg",
+            "name": "Lingrid"
+        },
+        {
+            "img_url": "/avatars/avatar_5.jpg",
+            "name": "yckoffMode"
+        },
+        {
+            "img_url": "/avatars/avatar_6.jpg",
+            "name": "tntsunrise"
+        },
+        {
+            "img_url": "/avatars/avatar_7.jpg",
+            "name": "TopTradingSignals"
+        },
+        {
+            "img_url": "/avatars/avatar_8.jpg",
+            "name": "TradingShot"
+        },
+        {
+            "img_url": "/avatars/avatar_9.jpg",
+            "name": "Taneesha"
+        },
+        {
+            "img_url": "/avatars/avatar_10.jpg",
+            "name": "Alansantana"
+        },
+        {
+            "img_url": "/avatars/avatar_11.jpg",
+            "name": "ramin_trader2006"
+        },
+        {
+            "img_url": "/avatars/avatar_12.jpg",
+            "name": "wongicarus"
+        }
+    ],
     "addr": ["D0AE", "EC95", "58CD", "350A"],
     "type": ["MARKET", "SL", "LIQ"],
     "leaderboard": [

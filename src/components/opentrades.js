@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import empty from "../assets/empty.svg";
 import {FaInfoCircle} from "react-icons/fa"
 
-function OpenTrads() {
+function OpenTrades() {
     const [checked, setChecked] = useState(false);
 
     return (
@@ -21,4 +21,4 @@ function OpenTrads() {
     );
 }
 
-export default OpenTrads;
+export default OpenTrades;

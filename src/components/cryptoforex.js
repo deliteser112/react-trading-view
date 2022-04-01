@@ -1,21 +1,38 @@
 import React, {useState, useEffect} from "react";
-import {FaChevronRight, FaChevronLeft} from "react-icons/fa"
+import ReactLoading from 'react-loading';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import SearchInput, {createFilter} from 'react-search-input'
+import {FaPlus} from "react-icons/fa"
 
-import {crypto, forex} from "../assets/real-time.json";
+import {crypto, forex, people} from "../assets/real-time.json";
 
-function Navbar() {
+const KEYS_TO_FILTERS = ['pair', 'name']
+
+function CryptoForex({ onHideSearch }) {
     const [cryptoData, setCryptoData] = useState([]);
     const [forexData, setForexData] = useState([]);
-    const [vcrypto, setCrypto] = useState(true);
-    const [vforex, setForex] = useState(false);
+    const [selectedTab, setSelectedTab] = useState('crypto');
 
-    const [isShow, setIsShow] = useState(true);
+    const [selectedData, setSelectedData] = useState([]);
+
+    const [isLoading, setLoading] = useState(true);
+
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
+        setData();
+        setInterval(setData, 2000);
         setTimeout(() => {
-            setInterval(setData, 3000);
-        }, 500);
+            setLoading(false)
+        }, 2000);
     }, [])
+
+    useEffect(() => {
+        if(selectedTab === 'crypto') setSelectedData(cryptoData);
+        else if(selectedTab === 'forex') setSelectedData(forexData);
+        else setSelectedData(people);
+    }, [selectedTab, cryptoData, forexData]);
 
     const setData = () => {
         const newCrypto = [];
@@ -43,56 +60,76 @@ function Navbar() {
         setForexData(newForex);
     }
 
-    const handleTab = (isSelected) => {
-        if(isSelected === 'crypto') {
-            setForex(false);
-            setCrypto(true);
-        } else {
-            setForex(true);
-            setCrypto(false);
-        }
+    const searchUpdate = (term) => {
+        setSearchTerm(term);
     }
 
+    const filteredData = selectedData.filter(createFilter(searchTerm, KEYS_TO_FILTERS))
+
     return (
-        <div>
-            <div className={`crypto-forex-panel ${isShow?'show':'hide'}`}>
-                <ul className="tab-item">
-                    <li className={vcrypto ? 'active' : ''} onClick={() => handleTab('crypto')}>Crypto</li>
-                    <li className={vforex ? 'active' : ''} onClick={() => handleTab('forex')}>Forex</li>
-                </ul>
-                <input type="text" className="search-bar" placeholder="Search a specific pair..." />
-                <div>
+        <div className="crypto-forex-panel">
+            <div className="real-search-bar">
+                <SearchInput className="search-input" onChange={searchUpdate} />
+                <FaPlus className="x-marks" onClick={() => onHideSearch()} />
+            </div>
+            <Tabs className="search-result-box">
+                <TabList>
+                    <Tab onClick={() => setSelectedTab('crypto')}>Crypto</Tab>
+                    <Tab onClick={() => setSelectedTab('forex')}>Forex</Tab>
+                    <Tab onClick={() => setSelectedTab('people')}>People</Tab>
+                </TabList>
+
+                <TabPanel>
+                    {isLoading ? <ReactLoading type={'bubbles'} className="loading-style" color={'grey'} height={'470px'} width={'20%'} /> :
+                        <div>
+                            <div className="table-header">
+                                <span>PAIR</span>
+                                <span>PRICE</span>
+                                <span>24H</span>
+                            </div>
+                            <div className="table-content">
+                                {filteredData.map((item, index) => 
+                                    <div className="table-row" key={index}>
+                                        <span className="pair-color">{item.pair}</span>
+                                        <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
+                                        <span className="rising-color">{item.hour}</span>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    }
+                    
+                </TabPanel>
+                <TabPanel>
                     <div className="table-header">
                         <span>PAIR</span>
                         <span>PRICE</span>
                         <span>24H</span>
                     </div>
                     <div className="table-content">
-                        {vcrypto && cryptoData.map((item, index) => 
+                        {filteredData.map((item, index) => 
                             <div className="table-row" key={index}>
                                 <span className="pair-color">{item.pair}</span>
                                 <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
                                 <span className="rising-color">{item.hour}</span>
                             </div>
                         )}
-                        {vforex && forexData.map((item, index) => 
-                            <div className="table-row" key={index}>
-                                <span className="pair-color">{item.pair}</span>
-                                <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
-                                <span className="rising-color">{item.hour}</span>
-                            </div>
-                        )}
-                        
                     </div>
-                </div>
-            </div>
-            
+                </TabPanel>
 
-            <div className="mobile-crypto-view" onClick={() => setIsShow(!isShow)}>
-                {isShow ? <FaChevronLeft /> : <FaChevronRight />}
-            </div>
+                <TabPanel>
+                    <div className="people-section">
+                        {filteredData.map((item, index) => 
+                            <div className="people-row" key={index}>
+                                <img src={item.img_url} alt={`avatar_${index}`} />
+                                <span>{item.name}</span>
+                            </div>
+                        )}
+                    </div>
+                </TabPanel>
+            </Tabs>
         </div>
     );
 }
 
-export default Navbar;
+export default CryptoForex;

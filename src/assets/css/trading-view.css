@@ -156,13 +156,13 @@
     }
 
     .open-orders {
-        flex-basis: 20%!important;
-        max-width: 20%!important;
+        flex-basis: 25%!important;
+        max-width: 25%!important;
     }
 
     .open-trades {
-        flex-basis: calc(80% - 20px)!important;
-        max-width: 80%!important;
+        flex-basis: calc(75% - 20px)!important;
+        max-width: 75%!important;
         margin-bottom: 0;
     }
 

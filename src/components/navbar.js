@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Switch from "react-switch";
 import {FaExchangeAlt, FaPowerOff, FaBars, FaTimes} from "react-icons/fa"
-import logo from '../assets/logo.png';
 
-function Navbar({ mode, setMode }) {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+function Navbar({ mode, setMode, onShowSearch }) {
 
     const [isShow, setIsShow] = useState(false);
-
     useEffect(() => {
         const r = document.querySelector(':root');
         if (!mode) {
@@ -16,6 +17,7 @@ function Navbar({ mode, setMode }) {
             r.style.setProperty('--grey3', '#000');
             r.style.setProperty('--grey2', '#222');
             r.style.setProperty('--grey1', '#333');
+            r.style.setProperty('--rising-color', '#19a100');
         }
     }, [mode])
 
@@ -29,9 +31,9 @@ function Navbar({ mode, setMode }) {
     return (
         <div className={`navbar ${mode? 'dark': 'light'}`}>
             <div className="navbar-left">
-                <div className="navbar-logo">
-                    <img src={logo} alt="logo-img" className="logo-image" />
-                    <h4 className="logo-text">LVRJ</h4>
+                <div className="navbar-logo" onClick={() => onShowSearch(true)}>
+                     <FontAwesomeIcon icon={faSearch} className="navbar-search-icon" />
+                     Search markets here
                 </div>
                 <div className="navbar-menu">
                     <a className="menu-link" href="/decentralized-trading/">Platform</a>

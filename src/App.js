@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { ThemeContext } from './contexts/ThemeContext';
 
 import Chart from "./components/chart";
@@ -19,11 +19,19 @@ import Footer from "./components/footer";
 
 function App() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
+
+  const [showSearch, setShowSearch] = useState(false);
+
+  useEffect(() => {
+    console.log(showSearch);
+  }, [showSearch])
+
   return (
     <div>
-      <Navbar mode={darkMode} setMode={setDarkMode} />
+      <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} />
+      {/* <CryptoForex /> */}
+      {showSearch && <CryptoForex onHideSearch={() => setShowSearch(false)} />}
       <div className="trading-panel row">
-        <CryptoForex />
         <Chart mode={darkMode}/>
         <LongShort mode={darkMode} />
       </div>
