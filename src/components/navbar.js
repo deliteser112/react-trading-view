@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Switch from "react-switch";
-import {FaExchangeAlt, FaPowerOff, FaUserCircle} from "react-icons/fa"
+import {FaExchangeAlt, FaPowerOff} from "react-icons/fa"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -30,7 +30,8 @@ function Navbar({ mode, setMode, onShowSearch }) {
 
     return (
         <div className={`navbar ${mode? 'dark': 'light'}`}>
-            <FaUserCircle className="mobile-view-icons" />
+            {/* <FaUserCircle className="mobile-view-icons" /> */}
+            <img src="/icons/profile.svg" alt="profile" className="mobile-view-icons" />
             <div className="navbar-left">
                 <div className="navbar-logo" onClick={() => onShowSearch(true)}>
                      <FontAwesomeIcon icon={faSearch} className="navbar-search-icon" />
@@ -58,7 +59,8 @@ function Navbar({ mode, setMode, onShowSearch }) {
                     <a className="button btn-pink" href="/decentralized-trading/">Connect Wallet <FaPowerOff className="reg-circle-icon" /></a>
                 </li>
             </ul>
-            <FaPowerOff className="mobile-view-icons" />
+            <img src="/icons/wallet.svg" alt="profile" className="mobile-view-icons" />
+            {/* <FaPowerOff className="mobile-view-icons" /> */}
             {/* {isShow ? <FaTimes className="hamburger" onClick={() => setIsShow(!isShow)} /> : <FaBars className="hamburger" onClick={() => setIsShow(!isShow)} />} */}
 
             {/* <ul className={`mobile-navbar ${isShow?'show':'hide'}`}>
