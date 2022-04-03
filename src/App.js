@@ -104,7 +104,7 @@ function App() {
           </TabPanel>
           <TabPanel>
             <div className="mobile-tab-body">
-              <h1>Liquidity</h1>
+              <h1 style={{ textAlign: 'center', color: 'white' }}>Comming Soon...</h1>
             </div>
           </TabPanel>
           <TabList className="tab-buttons">
