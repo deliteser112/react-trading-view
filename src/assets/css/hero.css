@@ -81,6 +81,7 @@
 body {
     background: var(--dark3);
     margin: auto;
+    overflow: hidden;
 }
 
 h4 {
@@ -138,7 +139,7 @@ span {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     background: none;
     border-bottom: 1px solid var(--border-color);
     border: none;
@@ -675,34 +676,34 @@ span {
     color: var(--grey1);
 }
 
-.table-header {
+.search-result-box .table-header {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     padding: 5px 0;
     border-bottom: 1px solid var(--dark1);
 }
 
-.table-header span {
+.search-result-box .table-header span {
     text-align: center;
     color: var(--grey1);
 }
 
-.table-row {
+.search-result-box .table-row {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     padding: 10px 5px;
 }
 
-.table-row:hover {
+.search-result-box .table-row:hover {
     cursor: pointer;
     background-color: var(--dark1);
 }
 
-.table-row span {
+.search-result-box .table-row span {
     text-align: center;
 }
 
-.table-row .pair-color {
+.search-result-box .table-row .pair-color {
     color: var(--grey1);
     font-size: 10px;
     font-size: 13px;
@@ -711,7 +712,7 @@ span {
 .table-content {
     overflow-x: hidden;
     overflow-y: auto;
-    height: 255px;
+    height: 470px;
 }
 
 .crypto-forex-panel .tab-item {
@@ -803,15 +804,3 @@ span {
         height: 470px;
     }
 }
-
-/* 
-@media only screen and (min-width: 1601px) {
-    
-    .trading-panel .long-short-panel {
-        flex-basis: 20%;
-        max-width: 20%;
-    }
-    .trading-panel .chart {
-        flex-basis: calc(80% - 20px);
-    }
-} */

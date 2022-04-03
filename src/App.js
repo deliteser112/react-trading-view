@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
+// import icons
+import {FaChartBar, FaCreativeCommonsSampling, FaChalkboard, FaJediOrder} from "react-icons/fa"
 
+// import components
 import Chart from "./components/chart";
 import Navbar from "./components/navbar";
 import LongShort from "./components/longshort";
@@ -29,7 +33,6 @@ function App() {
   return (
     <div>
       <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} />
-      {/* <CryptoForex /> */}
       {showSearch && <CryptoForex onHideSearch={() => setShowSearch(false)} />}
       <div className="trading-panel row">
         <Chart mode={darkMode}/>
@@ -72,6 +75,59 @@ function App() {
         <NFTOrders />
       </div>
       <Footer />
+
+
+      {/* Mobile version */}
+      <div className="mobile-version-section">
+        <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} />
+        <Tabs className="mobile-section-tab">
+          <TabPanel>
+            <div className="mobile-tab-body">
+              <div className="trading-panel row">
+                <Chart mode={darkMode}/>
+                <LongShort mode={darkMode} />
+              </div>
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="mobile-tab-body">
+              <div className="trading-container">
+                <OpenTrads />
+                <OpenOrders />
+              </div>
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="mobile-tab-body right-trade">
+              <LeaderBoard />
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="mobile-tab-body">
+              <h1>Liquidity</h1>
+            </div>
+          </TabPanel>
+          <TabList className="tab-buttons">
+              <Tab>
+                <FaChartBar className="tab-button-icon" />
+                <p>Trade</p> 
+              </Tab>
+              <Tab>
+                <FaJediOrder className="tab-button-icon" />
+                <p>Orders</p> 
+              </Tab>
+              <Tab>
+                <FaChalkboard className="tab-button-icon" />
+                <p>LeaderBoard</p> 
+              </Tab>
+              
+              <Tab>
+                <FaCreativeCommonsSampling className="tab-button-icon" />
+                <p>Liquidity</p> 
+              </Tab>
+          </TabList>
+        </Tabs>
+      </div>
     </div>
   );
 }

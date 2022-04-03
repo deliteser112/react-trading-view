@@ -6,6 +6,7 @@ import "./assets/css/hero.css";
 import "./assets/css/trading-view.css";
 import "./assets/css/trading-dashboard.css";
 import "./assets/css/search-input.css";
+import "./assets/css/mobile-section.css";
 
 // import App.js
 import App from './App';
