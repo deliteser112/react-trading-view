@@ -609,7 +609,7 @@ span {
 }
 
 .react-tabs__tab {
-    color: var(--dark1) !important;
+    color: var(--grey1) !important;
 }
 
 .react-tabs__tab--selected {

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
 // import icons
-import {FaChartBar, FaCreativeCommonsSampling, FaChalkboard, FaJediOrder} from "react-icons/fa"
+import {FaChartBar, FaCreativeCommonsSampling, FaChalkboard, FaGrinBeam} from "react-icons/fa"
 
 // import components
 import Chart from "./components/chart";
@@ -104,7 +104,7 @@ function App() {
           </TabPanel>
           <TabPanel>
             <div className="mobile-tab-body">
-              <h1 style={{ textAlign: 'center', color: 'white' }}>Comming Soon...</h1>
+              <p className="central-link">Comming soon...</p>
             </div>
           </TabPanel>
           <TabList className="tab-buttons">
@@ -113,8 +113,8 @@ function App() {
                 <p>Trade</p> 
               </Tab>
               <Tab>
-                <FaJediOrder className="tab-button-icon" />
-                <p>Orders</p> 
+                <FaGrinBeam className="tab-button-icon" />
+                <p>Activity</p> 
               </Tab>
               <Tab>
                 <FaChalkboard className="tab-button-icon" />
