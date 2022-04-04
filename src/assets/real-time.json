@@ -1,5 +1,6 @@
 {
     "crypto": ["AAVE/USD","ADA/USD","ALGO/USD","AXS/USD","BAT/USD","BCH/USD","BNB/USD","BNT/USD","BTC/USD","COMP/USD","CRV/USD","DASH/USD","DOT/USD","ENJ/USD","EOS/USD","ETC/USD","ETH/USD","GRT/USD","HBAR/USD","ICP/USD","LINK/USD","LTC/USD"],
+    "liquidity": ["ORION", "ETH", "ETH", "FLOKI", "WBTC", "SHINJA", "KOMPETE", "ETH", "REVELATION", "HEART", "KUMA", "ETH", "BBI", "ILLUM", "ETH", "LKDV2", "ETH", "ETH", "USDC", "LINK", "ETH", "APE", "WAGMI", "ETH"],
     "forex": ["AUD/USD", "EUR/CHF", "EUR/GBP", "EUR/JPY", "EUR/USD", "GBP/USD", "NZD/USD", "USD/CAD", "USD/CHF", "USD/JPY"],
     "people": [
         {

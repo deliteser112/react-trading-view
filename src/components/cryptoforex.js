@@ -25,7 +25,7 @@ function CryptoForex({ onHideSearch }) {
         // setInterval(setData, 2000);
         setTimeout(() => {
             setLoading(false)
-        }, 2000);
+        }, 1000);
     }, [])
 
     useEffect(() => {

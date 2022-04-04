@@ -19,7 +19,6 @@
     width: 100%;
     height: 100%;
     background-color: var(--dark3);
-    /* display: none; */
 }
 
 .mobile-section-tab {
@@ -28,7 +27,6 @@
 
 .mobile-tab-body {
     height: 100%;
-    /* height: 30vh; */
     overflow-y: auto;
 }
 
@@ -48,6 +46,144 @@
 .tab-button-icon {
     width: 30px;
     height: 30px;
+}
+
+
+/* Liquidity section */
+
+.liquidity {
+    padding: 20px;
+}
+
+.liquidity .category {
+    font-size: 18px;
+    color: var(--grey1);
+    margin: 0;
+}
+
+.liquidity .price {
+    color: var(--grey1);
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'system-ui';
+    margin: 0;
+}
+
+.liquidity .currency {
+    font-size: 25px;
+    font-weight: 100;
+    color: var(--grey3);
+}
+
+.liquidity .rate {
+    color: var(--rising-color);
+    position: relative;
+    top: -25px;
+    left: 0;
+    font-weight: 100;
+    font-family: 'system-ui';
+}
+
+.liquidity .d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.liquidity .right-act span {
+    color: var(--grey1);
+}
+
+.liquidity .right-act span:last-child {
+    margin-left: 5px;
+    font-size: 11px;
+    color: var(--dark1);
+}
+
+.liquidity .left-act div {
+    color: var(--cyan);
+    font-size: 13px;
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+
+.liquidity .left-act div.active {
+    background-color: var(--cyan);
+    color: white;
+}
+
+.liquidity .table-header {
+    display: grid;
+    grid-template-columns: 32% 43% 12% 15%!important;
+    margin: 0;
+    text-align: left;
+    width: 100%!important;
+    color: var(--dark1);
+}
+
+.liquidity .table-row {
+    display: grid;
+    grid-template-columns: 11% 21% 16% 27% 12% 13%!important;
+    margin: 0;
+    text-align: left;
+    width: 100%!important;
+    padding-top: 10px;
+}
+
+.liquidity .table-row:hover {
+    background-color: var(--dark1);
+}
+
+.liquidity .table-row div {
+    font-size: 13px;
+    color: var(--grey3);
+}
+
+.liquidity .text-right {
+    text-align: right;
+}
+
+.liquidity .text-left {
+    text-align: left !important;
+}
+
+.liquidity .text-center {
+    text-align: center !important;
+}
+
+.liquidity .text-dark {
+    color: var(--dark1) !important;
+}
+
+.liquidity .ml-3 {
+    margin-left: 3px;
+}
+
+.liquidity .plus-color {
+    color: var(--rising-color);
+    margin-top: 7px;
+}
+
+.liquidity .minus-color {
+    color: var(--danger);
+    margin-top: 7px;
+}
+
+.liquidity .icon-size {
+    font-size: 30px !important; 
+}
+
+.liquidity .table-body {
+    position: relative;
+    height: calc(100vh - 290px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    will-change: transform;
+    direction: ltr;
+}
+
+.liquidity .table-header div {
+    text-align: right;
 }
 
 @media only screen and (min-width: 1336px) {

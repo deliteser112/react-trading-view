@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
 // import icons
-import {FaChartBar, FaCreativeCommonsSampling, FaChalkboard, FaGrinBeam} from "react-icons/fa"
+import {GiSuperMushroom, GiCampfire, GiTakeMyMoney} from "react-icons/gi"
+import {MdAutoGraph} from "react-icons/md"
 
 // import components
 import Chart from "./components/chart";
@@ -18,6 +19,8 @@ import LeaderBoard from "./components/leaderboard";
 import PersonalTrading from "./components/personaltrading";
 
 import NFTOrders from "./components/nftorders";
+
+import Liquidity from "./components/liquidity";
 
 import Footer from "./components/footer";
 
@@ -104,25 +107,25 @@ function App() {
           </TabPanel>
           <TabPanel>
             <div className="mobile-tab-body">
-              <p className="central-link">Comming soon...</p>
+              <Liquidity />
             </div>
           </TabPanel>
           <TabList className="tab-buttons">
               <Tab>
-                <FaChartBar className="tab-button-icon" />
+                <MdAutoGraph className="tab-button-icon" />
                 <p>Trade</p> 
               </Tab>
               <Tab>
-                <FaGrinBeam className="tab-button-icon" />
+                <GiCampfire className="tab-button-icon" />
                 <p>Activity</p> 
               </Tab>
               <Tab>
-                <FaChalkboard className="tab-button-icon" />
+                <GiSuperMushroom className="tab-button-icon" />
                 <p>LeaderBoard</p> 
               </Tab>
               
               <Tab>
-                <FaCreativeCommonsSampling className="tab-button-icon" />
+                <GiTakeMyMoney className="tab-button-icon" />
                 <p>Liquidity</p> 
               </Tab>
           </TabList>
