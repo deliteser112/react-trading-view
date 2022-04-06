@@ -132,20 +132,12 @@ span {
     margin-right: 10px;
 }
 
-.long-short {
-    padding: 15px;
+.mobile-long-short {
+    padding: 0px 20px;
     width: 100%;
-    background-color: var(--indigo);
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    transition: all .5s;
+    margin-top: 23px;
 }
 
-.long-short:hover {
-    background-color: var(--pink);
-}
 
 .navbar {
     position: relative;
@@ -368,6 +360,7 @@ span {
 }
 
 
+
 /* ---------------------------------------------------------------- */
 /* Long Short Panel */
 .long-short-panel {
@@ -386,6 +379,7 @@ span {
     display: flex;
     justify-content: space-between;
     padding: 0;
+    width: 100%;
 }
 
 .tab-item>li {

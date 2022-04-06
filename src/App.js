@@ -77,10 +77,17 @@ function App() {
                 <Chart mode={darkMode}/>
                 {showLongShort && <LongShort mode={darkMode} />}
                 {!showLongShort && 
-                  <div className="long-short" onClick={() => setShowLongShort(true)}>
-                    <img src={ArrowUp} alt="long" /> Long &nbsp;&nbsp;&nbsp; 
-                    <img src={ArrowDown} alt="short" /> Short
+                  // <div className="long-short" onClick={() => setShowLongShort(true)}>
+                  //   <img src={ArrowUp} alt="long" /> Long &nbsp;&nbsp;&nbsp; 
+                  //   <img src={ArrowDown} alt="short" /> Short
+                  // </div>
+                  <div className="mobile-long-short">
+                    <ul className="tab-item">
+                      <li className="active" onClick={() => setShowLongShort(true)}><img src={ArrowUp} alt="long" /> Long</li>
+                      <li onClick={() => setShowLongShort(true)}><img src={ArrowDown} alt="short" /> Short</li>
+                    </ul>
                   </div>
+                  
                 }
                 
               </div>
