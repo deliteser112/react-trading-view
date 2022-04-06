@@ -3,8 +3,12 @@ import {AiOutlinePlus, AiOutlineMinus, AiOutlineInfoCircle} from "react-icons/ai
 import {GiElephant, GiChicken} from "react-icons/gi"
 import {liquidity} from "../assets/real-time.json";
 
+// components
+import Deposit from "./deposit";
+
 function Liquidity() {
     const [sampleData, setSampleData] = useState([]);
+    const [show, setShow] = useState(false);
     useEffect(() => {
         const sampleArr = [];
         const cLength = liquidity.length-1;
@@ -33,7 +37,20 @@ function Liquidity() {
     return (
         <div className="liquidity">
             <p className="category">Liquidity</p>
-            <p className="price"><span className="currency">$</span>3.52B <span className="rate">+0.35%</span></p>
+            <div className="d-flex">
+                <p className="price">
+                    <span className="currency">$</span>3.52B <span className="rate">+0.35%</span>
+                </p>
+                {!show && 
+                    <div className="btn-deposit" onClick={() => setShow(true)}>
+                        Deposit
+                    </div>
+                }
+                
+            </div>
+            
+            {show && <Deposit />}
+            
             <div className="d-flex">
                 <div className="d-flex right-act">
                     <span>Pools Activity</span>
