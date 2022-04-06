@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
 // import icons
 import {GiSuperMushroom, GiCampfire, GiTakeMyMoney} from "react-icons/gi"
 import {MdAutoGraph} from "react-icons/md"
-import ArrowUp from './assets/arrow-up.svg';
-import ArrowDown from './assets/arrow-down.svg';
 
 // import components
 import Chart from "./components/chart";
 import Navbar from "./components/navbar";
 import LongShort from "./components/longshort";
 import CryptoForex from "./components/cryptoforex";
+
+import LongShortButton from "./components/longshortbutton";
 
 import OpenTrads from "./components/opentrades";
 import OpenOrders from "./components/openorders";
@@ -29,6 +29,7 @@ import Liquidity from "./components/liquidity";
 import Footer from "./components/footer";
 
 function App() {
+  const bottomRef = useRef();
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const [showSearch, setShowSearch] = useState(false);
@@ -38,6 +39,14 @@ function App() {
   useEffect(() => {
     console.log(showSearch);
   }, [showSearch])
+
+  const handleShowLongShort = () => {
+    setShowLongShort(true);
+    bottomRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 
   return (
     <div>
@@ -72,24 +81,14 @@ function App() {
         <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} />
         <Tabs className="mobile-section-tab">
           <TabPanel>
-            <div className="mobile-tab-body">
+            <div className="mobile-tab-body" style={{ overflow: `${showLongShort ? 'auto' : 'hidden'}` }}>
               <div className="trading-panel row">
                 <Chart mode={darkMode}/>
                 {showLongShort && <LongShort mode={darkMode} />}
                 {!showLongShort && 
-                  // <div className="long-short" onClick={() => setShowLongShort(true)}>
-                  //   <img src={ArrowUp} alt="long" /> Long &nbsp;&nbsp;&nbsp; 
-                  //   <img src={ArrowDown} alt="short" /> Short
-                  // </div>
-                  <div className="mobile-long-short">
-                    <ul className="tab-item">
-                      <li className="active" onClick={() => setShowLongShort(true)}><img src={ArrowUp} alt="long" /> Long</li>
-                      <li onClick={() => setShowLongShort(true)}><img src={ArrowDown} alt="short" /> Short</li>
-                    </ul>
-                  </div>
-                  
+                  <LongShortButton onShowLongShort={handleShowLongShort} />
                 }
-                
+                <div ref={bottomRef} style={{ height: 'calc(100vh - 130px)' }} />
               </div>
             </div>
           </TabPanel>
@@ -116,16 +115,15 @@ function App() {
                 <MdAutoGraph className="tab-button-icon" />
                 <p>Trade</p> 
               </Tab>
-              <Tab>
+              <Tab onClick={() => setShowLongShort(false)}>
                 <GiCampfire className="tab-button-icon" />
                 <p>Activity</p> 
               </Tab>
-              <Tab>
+              <Tab onClick={() => setShowLongShort(false)}>
                 <GiSuperMushroom className="tab-button-icon" />
                 <p>LeaderBoard</p> 
               </Tab>
-              
-              <Tab>
+              <Tab onClick={() => setShowLongShort(false)}>
                 <GiTakeMyMoney className="tab-button-icon" />
                 <p>Liquidity</p> 
               </Tab>

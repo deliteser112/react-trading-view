@@ -26,7 +26,7 @@ function LongShort({ mode }) {
     }
 
     return (
-        <div className="long-short-panel">
+        <div id="long_short" className="long-short-panel">
             <ul className="tab-item">
                 <li className={long ? 'active' : ''} onClick={() => handleTab('long')}><img src={ArrowUp} alt="long" /> Long</li>
                 <li className={short ? 'active' : ''} onClick={() => handleTab('short')}><img src={ArrowDown} alt="short" /> Short</li>
