@@ -132,6 +132,21 @@ span {
     margin-right: 10px;
 }
 
+.long-short {
+    padding: 15px;
+    width: 100%;
+    background-color: var(--indigo);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    transition: all .5s;
+}
+
+.long-short:hover {
+    background-color: var(--pink);
+}
+
 .navbar {
     position: relative;
     z-index: 10;

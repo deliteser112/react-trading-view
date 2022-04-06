@@ -4,6 +4,8 @@ import { ThemeContext } from './contexts/ThemeContext';
 // import icons
 import {GiSuperMushroom, GiCampfire, GiTakeMyMoney} from "react-icons/gi"
 import {MdAutoGraph} from "react-icons/md"
+import ArrowUp from './assets/arrow-up.svg';
+import ArrowDown from './assets/arrow-down.svg';
 
 // import components
 import Chart from "./components/chart";
@@ -30,6 +32,8 @@ function App() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const [showSearch, setShowSearch] = useState(false);
+
+  const [showLongShort, setShowLongShort] = useState(false);
 
   useEffect(() => {
     console.log(showSearch);
@@ -71,7 +75,14 @@ function App() {
             <div className="mobile-tab-body">
               <div className="trading-panel row">
                 <Chart mode={darkMode}/>
-                <LongShort mode={darkMode} />
+                {showLongShort && <LongShort mode={darkMode} />}
+                {!showLongShort && 
+                  <div className="long-short" onClick={() => setShowLongShort(true)}>
+                    <img src={ArrowUp} alt="long" /> Long &nbsp;&nbsp;&nbsp; 
+                    <img src={ArrowDown} alt="short" /> Short
+                  </div>
+                }
+                
               </div>
             </div>
           </TabPanel>

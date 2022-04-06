@@ -3,14 +3,10 @@ import React from "react";
 function Profile() {
     return (
         <div className="user-profile">
-           <h3>$LVRJ Earn</h3>
-           <p>
-               $LVRJ Earn offers liquidity providers attractive APYs through efficient use of capital. The first $LVRJ Earn trading strategy is $LVRJ-USDC.
-           </p>
            <div className="d-flex item-center flex-start">
                 <img src="/icons/dai.png" alt="lvrj" className="currency-icon" />
                 <img src="/icons/usdc.jpeg" alt="lvrj" className="currency-icon ml-5" />
-                <p> $LVRJ-USDC</p>
+                <p> $LVRJ-DAI</p>
             </div>
             <ul className="invoice-list">
                 <li>
@@ -27,7 +23,7 @@ function Profile() {
                 </li> 
                 <li>
                     <span>APY</span>
-                    <span>0.02%</span>
+                    <span>20.5%</span>
                 </li> 
             </ul>
             <div className="d-flex space-between">
