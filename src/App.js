@@ -10,9 +10,12 @@ import Chart from "./components/chart";
 import Navbar from "./components/navbar";
 import LongShort from "./components/longshort";
 import CryptoForex from "./components/cryptoforex";
+import PopupOverlay from "./components/popupoverlay";
 
 import OpenTrads from "./components/opentrades";
 import OpenOrders from "./components/openorders";
+
+import MediumSection from "./components/mediumsection";
 
 import AllTrades from "./components/alltrades";
 import LeaderBoard from "./components/leaderboard";
@@ -28,6 +31,7 @@ function App() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const [showSearch, setShowSearch] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
 
   useEffect(() => {
     console.log(showSearch);
@@ -35,8 +39,9 @@ function App() {
 
   return (
     <div>
-      <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} />
+      <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} onShowOverlay={() => setShowOverlay(true)} />
       {showSearch && <CryptoForex onHideSearch={() => setShowSearch(false)} />}
+      {showOverlay && <PopupOverlay onHideOverlay={() => setShowOverlay(false)} />}
       <div className="trading-panel row">
         <Chart mode={darkMode}/>
         <LongShort mode={darkMode} />
@@ -45,26 +50,7 @@ function App() {
         <OpenTrads />
         <OpenOrders />
       </div>
-      <div className="title-section">
-        <h1 className="page-title-gradient">Virtual Leveraged Trading</h1>
-        <p>Claim your free 10,000 DAI and train your leveraged trading skills on our platform.</p>
-      </div>
-      <div className="stats-24h">
-        <div className="d-flex">
-          <div />
-          <div className="card pd-35 m-3">
-            <p className="card-title">$2,579,157</p>
-            <p className="card-subtitle">daily volume</p>
-          </div>
-          <div className="card pd-35 m-3">
-            <p className="card-title">63</p>
-            <p className="card-subtitle">TRADES COUNT</p>
-          </div>
-          <div />
-        </div>
-      </div>
-      <p className="central-link"> <span><a href="/decentralize">Copy referral link</a> </span>  Traders earn 0.01% more, and you earn 0.01% on each trade.You have earned ... GNS so far.</p>
-
+      <MediumSection />
       <div className="all-trades-container">
         <div className="row">
           <div className="left-trade col-6">

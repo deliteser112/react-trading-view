@@ -46,11 +46,8 @@ function Liquidity() {
                         Deposit
                     </div>
                 }
-                
             </div>
-            
             {show && <Deposit />}
-            
             <div className="d-flex">
                 <div className="d-flex right-act">
                     <span>Pools Activity</span>

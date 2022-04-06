@@ -95,6 +95,10 @@
     flex-wrap: wrap;
 }
 
+.item-center {
+    align-items: center;
+}
+
 .stats-24h .d-flex {
     display: block;
 }

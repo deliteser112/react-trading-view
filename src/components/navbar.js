@@ -5,7 +5,7 @@ import {FaExchangeAlt, FaPowerOff, FaAngleLeft, FaAngleRight} from "react-icons/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-function Navbar({ mode, setMode, onShowSearch }) {
+function Navbar({ mode, setMode, onShowSearch, onShowOverlay }) {
 
     const [isShow, setIsShow] = useState(false);
     useEffect(() => {
@@ -38,7 +38,7 @@ function Navbar({ mode, setMode, onShowSearch }) {
             </div>
             <div className={`navbar ${mode? 'dark': 'light'}`}>
                 {/* <FaUserCircle className="mobile-view-icons" /> */}
-                <img src="/icons/profile.svg" alt="profile" className="mobile-view-icons" />
+                <img src="/icons/profile.svg" alt="profile" className="mobile-view-icons" onClick={() => onShowOverlay(true)} />
                 <div className="navbar-left">
                     <div className="navbar-logo" onClick={() => onShowSearch(true)}>
                         <FontAwesomeIcon icon={faSearch} className="navbar-search-icon" />
