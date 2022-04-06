@@ -4,7 +4,7 @@
     left: 0;
     z-index: 109;
     width: 100%;
-    height: calc(100% - 130px);
+    height: calc(100% - 125px);
     background-color: var(--dark3);
     padding: 10px 20px;
 }
