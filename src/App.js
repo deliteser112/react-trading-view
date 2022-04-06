@@ -11,6 +11,7 @@ import Navbar from "./components/navbar";
 import LongShort from "./components/longshort";
 import CryptoForex from "./components/cryptoforex";
 
+import PopupOverlay from "./components/popupoverlay";
 import LongShortButton from "./components/longshortbutton";
 
 import OpenTrads from "./components/opentrades";
@@ -33,6 +34,7 @@ function App() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const [showSearch, setShowSearch] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
 
   const [showLongShort, setShowLongShort] = useState(false);
 
@@ -50,8 +52,9 @@ function App() {
 
   return (
     <div>
-      <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} />
+      <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} onShowOverlay={() => setShowOverlay(true)} />
       {showSearch && <CryptoForex onHideSearch={() => setShowSearch(false)} />}
+      {showOverlay && <PopupOverlay onHideOverlay={() => setShowOverlay(false)} />}
       <div className="trading-panel row">
         <Chart mode={darkMode}/>
         <LongShort mode={darkMode} />

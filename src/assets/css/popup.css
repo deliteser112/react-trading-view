@@ -1,0 +1,84 @@
+.popup {
+    position: absolute;
+    top: 63px;
+    left: 0;
+    z-index: 109;
+    width: 100%;
+    height: calc(100% - 125px);
+    background-color: var(--dark3);
+    padding: 10px 20px;
+}
+
+.popup * {
+    color: var(--grey1);
+}
+
+.popup .popup-header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.popup-close {
+    width: 30px;
+    height: 30px;
+}
+
+.popup .popup-avatar {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.popup .intro-section {
+    text-align: center;
+}
+
+.popup .card {
+    padding: 20px;
+    box-shadow: 2px 2px 15px var(--shadow);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.popup .mini-chart {
+    width: 100%;
+    max-height: 60px;
+}
+
+.popup .currency-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.popup .invoice-list {
+    padding: 0;
+}
+
+.popup .btn {
+    text-align: center;
+    width: calc(50% - 10px);
+    padding: 10px 20px;
+    background-color: var(--dark2);
+    color: var(--grey1);
+    border-radius: 5px;
+    transition: all .5s;
+    margin-top: 10px;
+}
+
+.popup .btn-withdraw:hover {
+    background-color: var(--dark1);
+}
+
+.popup .btn-deposit {
+    background-color: var(--blue2);
+}
+
+.popup .btn-deposit:hover {
+    background-color: var(--blue1);
+}
+
+
+
+
