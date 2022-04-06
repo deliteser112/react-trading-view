@@ -1,42 +1,23 @@
-.popup {
-    position: absolute;
-    top: 63px;
-    left: 0;
-    z-index: 109;
-    width: 100%;
-    height: calc(100% - 125px);
-    background-color: var(--dark3);
-    padding: 10px 20px;
+.user-profile {
+    margin-bottom: 20px;
 }
 
-.popup * {
+.user-profile * {
     color: var(--grey1);
 }
 
-.popup .popup-header {
+.user-profile .user-profile-header {
     display: flex;
     justify-content: flex-end;
     width: 100%;
 }
 
-.popup-close {
+.user-profile-close {
     width: 30px;
     height: 30px;
 }
 
-.popup .card {
-    padding: 20px;
-    box-shadow: 2px 2px 15px var(--shadow);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-}
-
-.popup .mini-chart {
-    width: 100%;
-    max-height: 60px;
-}
-
-.popup .currency-icon {
+.user-profile .currency-icon {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -44,18 +25,18 @@
 }
 
 .flex-start {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
 }
 
 .space-between {
     justify-content: space-between;
 }
 
-.popup .invoice-list {
+.user-profile .invoice-list {
     padding: 0;
 }
 
-.popup .btn {
+.user-profile .btn {
     text-align: center;
     width: calc(50% - 10px);
     padding: 10px 20px;
@@ -66,18 +47,14 @@
     margin-top: 10px;
 }
 
-.popup .btn-withdraw:hover {
+.user-profile .btn-withdraw:hover {
     background-color: var(--dark1);
 }
 
-.popup .btn-deposit {
+.user-profile .btn-deposit {
     background-color: var(--blue2);
 }
 
-.popup .btn-deposit:hover {
+.user-profile .btn-deposit:hover {
     background-color: var(--blue1);
 }
-
-
-
-

@@ -10,7 +10,6 @@ import Chart from "./components/chart";
 import Navbar from "./components/navbar";
 import LongShort from "./components/longshort";
 import CryptoForex from "./components/cryptoforex";
-import PopupOverlay from "./components/popupoverlay";
 
 import OpenTrads from "./components/opentrades";
 import OpenOrders from "./components/openorders";
@@ -31,7 +30,6 @@ function App() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const [showSearch, setShowSearch] = useState(false);
-  const [showOverlay, setShowOverlay] = useState(false);
 
   useEffect(() => {
     console.log(showSearch);
@@ -39,9 +37,8 @@ function App() {
 
   return (
     <div>
-      <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} onShowOverlay={() => setShowOverlay(true)} />
+      <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} />
       {showSearch && <CryptoForex onHideSearch={() => setShowSearch(false)} />}
-      {showOverlay && <PopupOverlay onHideOverlay={() => setShowOverlay(false)} />}
       <div className="trading-panel row">
         <Chart mode={darkMode}/>
         <LongShort mode={darkMode} />
