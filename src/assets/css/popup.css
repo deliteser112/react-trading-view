@@ -33,16 +33,23 @@
     text-align: center;
 }
 
-.popup .card {
+.popup .popup-card {
     padding: 20px;
-    box-shadow: 2px 2px 15px var(--shadow);
+    /* box-shadow: 2px 2px 15px var(--shadow);
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: 10px; */
 }
 
 .popup .mini-chart {
+    position: absolute;
+    left: 0;
     width: 100%;
-    max-height: 60px;
+    bottom: 2px;
+}
+
+.popup .rating {
+    text-align: center;
+    height: 36px
 }
 
 .popup .currency-icon {
@@ -54,6 +61,15 @@
 
 .popup .invoice-list {
     padding: 0;
+}
+
+.popup .invoice-list span {
+    font-size: 16px;
+}
+
+.popup .invoice-list li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--dark1);
 }
 
 .popup .btn {
@@ -79,6 +95,12 @@
     background-color: var(--blue1);
 }
 
+.popup .intro-section h3 {
+    margin: 5px 0;
+}
 
+.popup .badge_offset {
+    margin: 0 10px;
+}
 
 

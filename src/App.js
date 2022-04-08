@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
 // import icons
-import {GiSuperMushroom, GiCampfire, GiTakeMyMoney} from "react-icons/gi"
-import {MdAutoGraph} from "react-icons/md"
+// import {GiSuperMushroom, GiCampfire, GiTakeMyMoney} from "react-icons/gi"
+// import {MdAutoGraph} from "react-icons/md"
 
 // import components
 import Chart from "./components/chart";
@@ -115,19 +115,19 @@ function App() {
           </TabPanel>
           <TabList className="tab-buttons">
               <Tab>
-                <MdAutoGraph className="tab-button-icon" />
+                <img src="/icons/trade.png" alt="trade" className="tab-button-icon" />
                 <p>Trade</p> 
               </Tab>
               <Tab onClick={() => setShowLongShort(false)}>
-                <GiCampfire className="tab-button-icon" />
+                <img src="/icons/activity.png" alt="activity" className="tab-button-icon" />
                 <p>Activity</p> 
               </Tab>
               <Tab onClick={() => setShowLongShort(false)}>
-                <GiSuperMushroom className="tab-button-icon" />
+                <img src="/icons/leadboard.png" alt="leaderboard" className="tab-button-icon" />
                 <p>LeaderBoard</p> 
               </Tab>
               <Tab onClick={() => setShowLongShort(false)}>
-                <GiTakeMyMoney className="tab-button-icon" />
+                <img src="/icons/liquidity.png" alt="liquidity" className="tab-button-icon" />
                 <p>Liquidity</p> 
               </Tab>
           </TabList>

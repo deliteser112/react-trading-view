@@ -1,6 +1,8 @@
 import React from "react";
 import {AiOutlineClose} from "react-icons/ai"
 
+import area_graph from '../assets/Vector.svg';
+
 function PopupOverlay({ onHideOverlay }) {
     return (
         <div className="popup">
@@ -10,9 +12,16 @@ function PopupOverlay({ onHideOverlay }) {
             <div className="intro-section">
                 <img src="/avatars/avatar_16.jpg" alt="avatar" className="popup-avatar" />
                 <h3>Ahmed Moneymagnet</h3>
+                <img src="/icons/rating.svg" alt="rating" className="rating" />
+                <div className="d-flex">
+                    <img src="/icons/badge_1.svg" alt="badge_1" />
+                    <img src="/icons/badge_2.svg" alt="badge_2" className="badge_offset" />
+                    <img src="/icons/badge_3.svg" alt="badge_3" />
+                </div>
             </div>
+
             
-            <div className="card">
+            <div className="popup-card">
                 <div className="d-flex item-center flex-start">
                     <img src="/icons/dai.png" alt="lvrj" className="currency-icon" />
                     <img src="/icons/usdc.jpeg" alt="lvrj" className="currency-icon ml-5" />
@@ -40,9 +49,8 @@ function PopupOverlay({ onHideOverlay }) {
                     <div className="btn btn-withdraw">Withdraw</div>
                     <div className="btn btn-deposit">Deposit</div>
                 </div> */}
-                <img src="/icons/Area_2.png" alt="area_2" className="mini-chart" />
             </div>
-                  
+            <img src={area_graph} alt="area_2" className="mini-chart" />
         </div>
     );
 }
