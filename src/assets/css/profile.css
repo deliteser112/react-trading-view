@@ -52,6 +52,7 @@
 }
 
 .user-profile .btn-deposit {
+    color: white;
     background-color: var(--blue2);
 }
 

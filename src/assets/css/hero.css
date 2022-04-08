@@ -166,7 +166,8 @@ span {
     padding: 5px 20px 5px 10px;
     border-radius: 30px;
     color: var(--grey1);
-    background-color: var(--dark2);
+    border: 1px solid var(--border-color);
+    background-color: var(--dark3);
 }
 
 .navbar-search-icon {
@@ -587,12 +588,12 @@ span {
     border-radius: 30px;
     max-width: 500px;
     margin-right: 40px;
-    background-color: var(--dark1);
+    background-color: var(--dark3);
 }
 
 .search-input>input {
-    background-color: var(--dark1);
-    color: var(--grey1);
+    background-color: var(--dark3);
+    color: var(--grey3);
     padding: 5px 10px 5px 35px !important;
 }
 
@@ -613,8 +614,7 @@ span {
     max-width: 500px;
     margin: auto;
     background-color: var(--dark3);
-    margin-top: 10px;
-    border-radius: 5px;
+    margin-top: 0px;
 }
 
 .react-tabs__tab {

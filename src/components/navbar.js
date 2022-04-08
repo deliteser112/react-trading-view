@@ -15,8 +15,8 @@ function Navbar({ mode, setMode, onShowSearch, onShowOverlay }) {
             r.style.setProperty('--dark2', '#dddde3');
             r.style.setProperty('--dark1', '#c7c7d1');
             r.style.setProperty('--grey3', '#000');
-            r.style.setProperty('--grey2', '#222');
-            r.style.setProperty('--grey1', '#333');
+            r.style.setProperty('--grey2', '#333');
+            r.style.setProperty('--grey1', '#555');
             r.style.setProperty('--rising-color', '#19a100');
         }
     }, [mode])

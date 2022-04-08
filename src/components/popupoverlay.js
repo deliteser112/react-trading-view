@@ -9,7 +9,7 @@ function PopupOverlay({ onHideOverlay }) {
             <div className="popup-header">
                 <AiOutlineClose onClick={onHideOverlay} className="popup-close" />
             </div>
-            <div className="intro-section">
+            {/* <div className="intro-section">
                 <img src="/avatars/avatar_16.jpg" alt="avatar" className="popup-avatar" />
                 <h3>Ahmed Moneymagnet</h3>
                 <img src="/icons/rating.svg" alt="rating" className="rating" />
@@ -18,14 +18,11 @@ function PopupOverlay({ onHideOverlay }) {
                     <img src="/icons/badge_2.svg" alt="badge_2" className="badge_offset" />
                     <img src="/icons/badge_3.svg" alt="badge_3" />
                 </div>
-            </div>
+            </div> */}
 
-            
             <div className="popup-card">
-                <div className="d-flex item-center flex-start">
-                    <img src="/icons/dai.png" alt="lvrj" className="currency-icon" />
-                    <img src="/icons/usdc.jpeg" alt="lvrj" className="currency-icon ml-5" />
-                    <p> $LVRJ-DAI</p>
+                <div className="trade-info flex-start">
+                    <img src="/icons/status.png" alt="lvrj" className="tab-button-icon" /> <h4>My Stats</h4>
                 </div>
                 <ul className="invoice-list">
                     <li>
