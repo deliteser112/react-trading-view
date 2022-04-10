@@ -103,4 +103,7 @@
     margin: 0 10px;
 }
 
-
+.popup .intro-section .large-label {
+    font-size: 186%;
+    color: var(--green)
+}

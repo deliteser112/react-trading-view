@@ -20,6 +20,10 @@ function PopupOverlay({ onHideOverlay }) {
                 </div>
             </div> */}
 
+            <div className="intro-section">
+                <span className="large-label">$42.46</span>
+            </div>
+
             <div className="popup-card">
                 <div className="trade-info flex-start">
                     <img src="/icons/status.png" alt="lvrj" className="tab-button-icon" /> <h4>My Stats</h4>
