@@ -1,13 +1,13 @@
 import React from "react";
 
-import { people } from "../assets/real-time.json";
+import { leaderboard } from "../assets/real-time.json";
 import {BsHandThumbsUpFill} from "react-icons/bs"
 
 function LeaderBoardMobile() {
     return (
         <div className="mobile-leaderboard">
             <p className="title">Leaderboard</p>
-            <p className="end-time">End In 2d 23Hours</p>
+            <p className="end-time">Leaderboard closes Sunday midnight and the top 3 win $2k of $LVRJ tokens.</p>
             <div className="top-rated-section">
                 <div className="rated-1">
                     <img src="/avatars/avatar_9.jpg" alt="avatar_1" className="avatar" />
@@ -26,14 +26,23 @@ function LeaderBoardMobile() {
                 </div>
                 <img src="/icons/rated_board.png" alt="rated_board" className="rated-board" />
             </div>
+
             <div className="rated-list">
-                {people.map((item, index) => 
+                <div className="list-header">
+                    <div>USER</div>
+                    <div sx={{ textAlign: 'left' }}>TRADES</div>
+                    <div>WINRATE</div>
+                    <div>PNL</div>
+                </div>
+                {leaderboard.map((item, index) => 
                     <div className="list-row" key={index}>
                         <span>{index+4}</span>
                         <img src={item.img_url} alt={item.img_url} className="list-avatar" />
                         <span>{item.name}</span>
+                        <span style={{ textAlign: 'center' }}>{item.trades}</span>
+                        <span>{item.winrate}</span>
                         <div style={{ textAlign: 'right' }}>
-                            <span className="badge"><BsHandThumbsUpFill className="bs-icon" /> {(Math.random() * 9999 + 1000).toFixed(0)}</span>
+                            <span className="badge"><BsHandThumbsUpFill className="bs-icon" /> {item.pnl}</span>
                         </div>
                     </div>
                 )}

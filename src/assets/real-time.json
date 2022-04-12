@@ -60,70 +60,90 @@
             "addr": "D0AE",
             "trades": "1",
             "winrate": "100%",
-            "pnl": "8240.34"
+            "pnl": "8240.34",
+            "img_url": "/avatars/avatar_1.jpg",
+            "name": "TradingView"
         },
         {
             "grade": "🥈",
             "addr": "21c0",
             "trades": "3",
             "winrate": "66.6%",
-            "pnl": "5819.86"
+            "pnl": "5819.86",
+            "img_url": "/avatars/avatar_2.jpg",
+            "name": "transparent-fx"
         },
         {
             "grade": "🥉",
             "addr": "1884",
             "trades": "11",
             "winrate": "60%",
-            "pnl": "673.21"
+            "pnl": "673.21",
+            "img_url": "/avatars/avatar_3.jpg",
+            "name": "Yuriy_Bishko"
         },
         {
             "grade": "4",
             "addr": "DEA4",
             "trades": "4",
             "winrate": "100%",
-            "pnl": "207.16"
+            "pnl": "207.16",
+            "img_url": "/avatars/avatar_4.jpg",
+            "name": "Lingrid"
         },
         {
             "grade": "5",
             "addr": "E495",
             "trades": "8",
             "winrate": "71.4%",
-            "pnl": "200.04"
+            "pnl": "200.04",
+            "img_url": "/avatars/avatar_5.jpg",
+            "name": "yckoffMode"
         },
         {
             "grade": "6",
             "addr": "350A",
             "trades": "1",
             "winrate": "100%",
-            "pnl": "142.98"
+            "pnl": "142.98",
+            "img_url": "/avatars/avatar_6.jpg",
+            "name": "tntsunrise"
         },
         {
             "grade": "7",
             "addr": "EAAD",
             "trades": "3",
             "winrate": "100%",
-            "pnl": "133.07"
+            "pnl": "133.07",
+            "img_url": "/avatars/avatar_7.jpg",
+            "name": "TopTradingSignals"
         },
         {
             "grade": "8",
             "addr": "926E",
             "trades": "15",
             "winrate": "40.4%",
-            "pnl": "89.09"
+            "pnl": "89.09",
+            "img_url": "/avatars/avatar_8.jpg",
+            "name": "TradingShot"
         },
         {
             "grade": "9",
             "addr": "6544",
             "trades": "42",
             "winrate": "100%",
-            "pnl": "36.73"
+            "pnl": "36.73",
+            "img_url": "/avatars/avatar_9.jpg",
+            "name": "Taneesha"
         },
         {
             "grade": "10",
             "addr": "427A",
             "trades": "76",
             "winrate": "0%",
-            "pnl": "-13.21"
+            "pnl": "-13.21",
+            "img_url": "/avatars/avatar_10.jpg",
+            "name": "Alansantana"
         }
     ]
 }

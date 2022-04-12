@@ -16,8 +16,8 @@
 
 .mobile-leaderboard .end-time {
     text-align: left;
-    color: var(--grey1);
-    font-size: 15px;
+    color: var(--grey3);
+    font-size: 13px;
 }
 
 .mobile-leaderboard .avatar {
@@ -88,7 +88,7 @@
 
 .mobile-leaderboard .list-row {
     display: grid;
-    grid-template-columns: 5% 15% 35% 45%;
+    grid-template-columns: 5% 12% 28% 15% 15% 25%;
     margin: 0;
     text-align: left;
     width: 100%!important;
@@ -102,5 +102,19 @@
 }
 
 .mobile-leaderboard .list-row span {
+    color: var(--grey1);
+}
+
+.mobile-leaderboard .list-header {
+    display: grid;
+    grid-template-columns: 45% 15% 15% 25%;
+    margin: 0;
+    text-align: left;
+    width: 100%!important;
+    padding: 10px 5px;
+    transition: all .5s;
+    align-items: center;
+    font-size: 11px;
+    text-align:center;
     color: var(--grey1);
 }
