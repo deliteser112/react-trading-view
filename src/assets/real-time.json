@@ -62,7 +62,8 @@
             "winrate": "100%",
             "pnl": "8240.34",
             "img_url": "/avatars/avatar_1.jpg",
-            "name": "TradingView"
+            "name": "TradingView",
+            "expanded": false
         },
         {
             "grade": "🥈",
@@ -71,7 +72,8 @@
             "winrate": "66.6%",
             "pnl": "5819.86",
             "img_url": "/avatars/avatar_2.jpg",
-            "name": "transparent-fx"
+            "name": "transparent-fx",
+            "expanded": false
         },
         {
             "grade": "🥉",
@@ -80,7 +82,8 @@
             "winrate": "60%",
             "pnl": "673.21",
             "img_url": "/avatars/avatar_3.jpg",
-            "name": "Yuriy_Bishko"
+            "name": "Yuriy_Bishko",
+            "expanded": false
         },
         {
             "grade": "4",
@@ -89,7 +92,8 @@
             "winrate": "100%",
             "pnl": "207.16",
             "img_url": "/avatars/avatar_4.jpg",
-            "name": "Lingrid"
+            "name": "Lingrid",
+            "expanded": false
         },
         {
             "grade": "5",
@@ -98,7 +102,8 @@
             "winrate": "71.4%",
             "pnl": "200.04",
             "img_url": "/avatars/avatar_5.jpg",
-            "name": "yckoffMode"
+            "name": "yckoffMode",
+            "expanded": false
         },
         {
             "grade": "6",
@@ -107,7 +112,8 @@
             "winrate": "100%",
             "pnl": "142.98",
             "img_url": "/avatars/avatar_6.jpg",
-            "name": "tntsunrise"
+            "name": "tntsunrise",
+            "expanded": false
         },
         {
             "grade": "7",
@@ -116,7 +122,8 @@
             "winrate": "100%",
             "pnl": "133.07",
             "img_url": "/avatars/avatar_7.jpg",
-            "name": "TopTradingSignals"
+            "name": "TopTradingSignals",
+            "expanded": false
         },
         {
             "grade": "8",
@@ -125,7 +132,8 @@
             "winrate": "40.4%",
             "pnl": "89.09",
             "img_url": "/avatars/avatar_8.jpg",
-            "name": "TradingShot"
+            "name": "TradingShot",
+            "expanded": false
         },
         {
             "grade": "9",
@@ -134,7 +142,8 @@
             "winrate": "100%",
             "pnl": "36.73",
             "img_url": "/avatars/avatar_9.jpg",
-            "name": "Taneesha"
+            "name": "Taneesha",
+            "expanded": false
         },
         {
             "grade": "10",
@@ -143,7 +152,8 @@
             "winrate": "0%",
             "pnl": "-13.21",
             "img_url": "/avatars/avatar_10.jpg",
-            "name": "Alansantana"
+            "name": "Alansantana",
+            "expanded": false
         }
     ]
 }

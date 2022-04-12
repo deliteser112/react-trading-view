@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
 // import icons
@@ -39,10 +39,6 @@ function App() {
   const [showOverlay, setShowOverlay] = useState(false);
 
   const [showLongShort, setShowLongShort] = useState(false);
-
-  useEffect(() => {
-    console.log(showSearch);
-  }, [showSearch])
 
   const handleShowLongShort = () => {
     setShowLongShort(true);

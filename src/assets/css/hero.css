@@ -387,8 +387,8 @@ span {
     padding: 10px 0;
     width: 49%;
     text-align: center;
-    background: var(--grey1);
-    color: var(--dark3);
+    background: var(--transparent);
+    color: var(--grey1);
     font-family: sans-serif;
     transition: all .4s;
 }

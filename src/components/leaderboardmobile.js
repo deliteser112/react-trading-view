@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, {useState} from "react";
 
 import { leaderboard } from "../assets/real-time.json";
@@ -6,6 +7,9 @@ import {BsHandThumbsUpFill} from "react-icons/bs"
 function LeaderBoardMobile() {
     const [short, setShort] = useState(false);
     const [long, setLong] = useState(true);
+
+    const [listData, setListData] = useState(leaderboard);
+
     const handleTab = (isSelected) => {
         if(isSelected === 'long') {
             setLong(true);
@@ -15,13 +19,25 @@ function LeaderBoardMobile() {
             setShort(true);
         }
     }
+
+    const handleExpandItem = (index) => {
+        const tmpList = [];
+        listData.map((item, i) => {
+            if (i === index) {
+                const { expanded } = item;
+                tmpList.push({...item, expanded: !expanded});
+            } else {
+                tmpList.push(item);
+            }
+        });
+        setListData(tmpList);
+    }
     return (
         <div className="mobile-leaderboard">
             <ul className="tab-item">
                 <li className={long ? 'active' : ''} onClick={() => handleTab('long')}> Weekly</li>
                 <li className={short ? 'active' : ''} onClick={() => handleTab('short')}> Montly</li>
             </ul>
-            <p className="title">Leaderboard</p>
             <p className="end-time">Leaderboard closes Sunday midnight and the top 3 win $2k of $LVRJ tokens.</p>
             <div className="top-rated-section">
                 <div className="rated-1">
@@ -45,20 +61,25 @@ function LeaderBoardMobile() {
             <div className="rated-list">
                 <div className="list-header">
                     <div>USER</div>
-                    <div sx={{ textAlign: 'left' }}>TRADES</div>
-                    <div>WINRATE</div>
-                    <div>PNL</div>
+                    <div style={{ textAlign: 'right' }}>PNL</div>
                 </div>
-                {leaderboard.map((item, index) => 
-                    <div className="list-row" key={index}>
-                        <span>{index+4}</span>
-                        <img src={item.img_url} alt={item.img_url} className="list-avatar" />
-                        <span>{item.name}</span>
-                        <span style={{ textAlign: 'center' }}>{item.trades}</span>
-                        <span>{item.winrate}</span>
-                        <div style={{ textAlign: 'right' }}>
-                            <span className="badge"><BsHandThumbsUpFill className="bs-icon" /> {item.pnl}</span>
+                {listData.map((item, index) => 
+                    <div className="list-item" key={index}>
+                        <div className="list-row" onClick={() => handleExpandItem(index)}>
+                            <span>{index+4}</span>
+                            <img src={item.img_url} alt={item.img_url} className="list-avatar" />
+                            <span>{item.name}</span>
+                            <div style={{ textAlign: 'right' }}>
+                                <span className="pnl-color">{item.pnl}</span>
+                            </div>
                         </div>
+                        {item.expanded && 
+                            <div className="detailed-info">
+                                <span>TRADE: <strong>{item.trades}</strong></span>
+                                <span>WINRATE: <strong>{item.winrate}</strong></span>
+                                <span role="img" aria-label="Fire">🔥 WIN STREAK</span>
+                            </div>
+                        }
                     </div>
                 )}
             </div>
