@@ -29,6 +29,8 @@ import Liquidity from "./components/liquidity";
 
 import Footer from "./components/footer";
 
+import LeaderBoardMobile from "./components/leaderboardmobile";
+
 function App() {
   const bottomRef = useRef();
   const { darkMode, setDarkMode } = useContext(ThemeContext);
@@ -105,7 +107,7 @@ function App() {
           </TabPanel>
           <TabPanel>
             <div className="mobile-tab-body right-trade">
-              <LeaderBoard />
+              <LeaderBoardMobile />
             </div>
           </TabPanel>
           <TabPanel>

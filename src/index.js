@@ -9,6 +9,7 @@ import "./assets/css/search-input.css";
 import "./assets/css/mobile-section.css";
 import "./assets/css/profile.css";
 import "./assets/css/popup.css";
+import "./assets/css/mobile-leaderboard.css";
 
 // import App.js
 import App from './App';
