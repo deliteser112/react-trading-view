@@ -3,6 +3,15 @@
     padding: 15px;
 }
 
+.mobile-leaderboard .tab-item {
+    margin-top: 0;
+    justify-content: center;
+}
+
+.mobile-leaderboard .tab-item>li {
+    width: 20%;
+}
+
 .mobile-leaderboard .top-rated-section {
     position: relative;
 }

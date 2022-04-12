@@ -1,11 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 
 import { leaderboard } from "../assets/real-time.json";
 import {BsHandThumbsUpFill} from "react-icons/bs"
 
 function LeaderBoardMobile() {
+    const [short, setShort] = useState(false);
+    const [long, setLong] = useState(true);
+    const handleTab = (isSelected) => {
+        if(isSelected === 'long') {
+            setLong(true);
+            setShort(false);
+        } else {
+            setLong(false);
+            setShort(true);
+        }
+    }
     return (
         <div className="mobile-leaderboard">
+            <ul className="tab-item">
+                <li className={long ? 'active' : ''} onClick={() => handleTab('long')}> Weekly</li>
+                <li className={short ? 'active' : ''} onClick={() => handleTab('short')}> Montly</li>
+            </ul>
             <p className="title">Leaderboard</p>
             <p className="end-time">Leaderboard closes Sunday midnight and the top 3 win $2k of $LVRJ tokens.</p>
             <div className="top-rated-section">
