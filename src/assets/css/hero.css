@@ -580,10 +580,11 @@ span {
 
 .real-search-bar {
     position: relative;
-    background-color:#000000c4;
-    /* background-color: var(--dark3); */
+    /* background-color:#000000c4; */
+    background-color: var(--transparent-popup);
     padding: 10px;
     width: 100%;
+    top: -2px;
 }
 .search-input {
     border: 1px solid var(--border-color);
@@ -604,7 +605,7 @@ span {
     right: 20px;
     top: 25px;
     transform: rotate(45deg);
-    color: var(--grey1);
+    color: var(--light);
 }
 
 .x-marks:hover {
@@ -615,18 +616,19 @@ span {
     padding: 20px;
     max-width: 500px;
     margin: auto;
-    background-color:#000000c4;
+    background-color: var(--transparent-popup);
+    /* background-color:#000000c4; */
     margin-top: 0px;
 }
 
 .react-tabs__tab {
-    color: var(--grey1) !important;
+    color: var(--light) !important;
 }
 
 .react-tabs__tab--selected {
-    background: var(--dark3) !important;
+    background: #131722 !important;
     border: none !important;
-    color: var(--grey1) !important;
+    color: var(--light) !important;
     border-bottom: 2px solid var(--grey1) !important;
 }
 
@@ -648,7 +650,7 @@ span {
     padding: 10px;
     border: none;
     margin-bottom: 10px;
-    color: var(--grey2);
+    color: var(--light);
     background-color: var(--dark3);
 }
 
@@ -696,7 +698,7 @@ span {
 
 .search-result-box .table-header span {
     text-align: center;
-    color: var(--grey1);
+    color: var(--light);
 }
 
 .search-result-box .table-row {
@@ -716,7 +718,7 @@ span {
 }
 
 .search-result-box .table-row .pair-color {
-    color: var(--grey1);
+    color: var(--light);
     font-size: 10px;
     font-size: 13px;
 }

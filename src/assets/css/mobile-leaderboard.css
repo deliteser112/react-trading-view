@@ -155,6 +155,7 @@
     color: var(--grey1);
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .mobile-leaderboard .detailed-info span {
