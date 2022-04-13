@@ -38,6 +38,7 @@
     --dark2: #1f2430;
     --dark3: #131722;
     --transparent: #09090b50;
+    --transparent-popup: #09090baf;
     --shadow: var(--dark3);
     --border-color: var(--dark1);
     --rising-color: #3deca7;

@@ -156,3 +156,26 @@
 .mobile-leaderboard .detailed-info span {
     font-size: 12px;
 }
+
+.mobile-leaderboard .detailed-info-top-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    -webkit-transform: translate(-7px, 100%);
+    -ms-transform: translate(-7px, 100%);
+    transform: translate(-26px, 100%);
+    font-size: 12px;
+    color: var(--main-color);
+    background-color: var(--transparent-popup);
+    border-radius: 10px;
+    min-width: 122px;
+}
+
+.mobile-leaderboard .rated-1 .detailed-info-top-3 {
+    transform: translate(-12px, 100%);
+}
+
+.mobile-leaderboard .detailed-info-top-3 span {
+    font-size: 12px;
+}

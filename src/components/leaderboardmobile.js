@@ -2,13 +2,14 @@
 import React, {useState} from "react";
 
 import { leaderboard } from "../assets/real-time.json";
-import {BsHandThumbsUpFill} from "react-icons/bs"
 
 function LeaderBoardMobile() {
     const [short, setShort] = useState(false);
     const [long, setLong] = useState(true);
 
     const [listData, setListData] = useState(leaderboard);
+
+    const [showTip, setShowTip] = useState(0);
 
     const handleTab = (isSelected) => {
         if(isSelected === 'long') {
@@ -32,6 +33,15 @@ function LeaderBoardMobile() {
         });
         setListData(tmpList);
     }
+
+    const handleShowTip = (tip) => {
+        if (tip === showTip) {
+            setShowTip(0)
+        } else {
+            setShowTip(tip)
+        }
+    }
+
     return (
         <div className="mobile-leaderboard">
             <ul className="tab-item">
@@ -44,19 +54,40 @@ function LeaderBoardMobile() {
                     <img src="/icons/crown.png" alt="lvrj" className="crawn-img" />
                     <img src="/avatars/avatar_9.jpg" alt="avatar_1" className="avatar" />
                     <p className="name">Hodges</p>
-                    <p className="badge"><BsHandThumbsUpFill className="bs-icon" /> 23131</p>
+                    <p className="badge" onClick={() => handleShowTip(1)}>23131</p>
+                    {showTip === 1 && 
+                        <div className="detailed-info-top-3">
+                            <div>TRADES: <strong> 4 </strong></div>
+                            <div>WINRATE: <strong> 100% </strong></div>
+                            <span role="img" aria-label="Fire">🔥 WIN STREAK</span>
+                        </div>
+                    }
                 </div>
                 <div className="rated-2">
                     <p className="name">#2</p>
                     <img src="/avatars/avatar_10.jpg" alt="avatar_2" className="avatar" />
                     <p className="name">Johnny Rios</p>
-                    <p className="badge"><BsHandThumbsUpFill className="bs-icon" />12332</p>
+                    <p className="badge" onClick={() => handleShowTip(2)}>2332</p>
+                    {showTip === 2 && 
+                        <div className="detailed-info-top-3">
+                            <div>TRADES: <strong> 12 </strong></div>
+                            <div>WINRATE: <strong> 94.1% </strong></div>
+                            <span role="img" aria-label="Fire">🔥 WIN STREAK</span>
+                        </div>
+                    }
                 </div>
                 <div className="rated-3">
                     <p className="name">#3</p>
                     <img src="/avatars/avatar_11.jpg" alt="avatar_3" className="avatar" />
                     <p className="name">Hammond</p>
-                    <p className="badge"><BsHandThumbsUpFill className="bs-icon" />6984</p>
+                    <p className="badge" onClick={() => handleShowTip(3)}>1984</p>
+                    {showTip === 3 && 
+                        <div className="detailed-info-top-3">
+                            <div>TRADES: <strong> 31 </strong></div>
+                            <div>WINRATE: <strong> 71.1% </strong></div>
+                            <span role="img" aria-label="Fire">🔥 WIN STREAK</span>
+                        </div>
+                    }
                 </div>
             </div>
 
