@@ -64,7 +64,7 @@
 
 .mobile-leaderboard .rated-1 {
     position: absolute;
-    top: -25px;
+    top: -15px;
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
@@ -146,6 +146,10 @@
     color: var(--rising-color) !important;
 }
 
+.mobile-leaderboard .fall-color {
+    color: #d34a4a !important;
+}
+
 .mobile-leaderboard .detailed-info {
     padding: 10px;
     color: var(--grey1);
@@ -162,10 +166,8 @@
     bottom: 0;
     left: 0;
     padding: 10px;
-    -webkit-transform: translate(-7px, 100%);
-    -ms-transform: translate(-7px, 100%);
     transform: translate(-26px, 100%);
-    font-size: 12px;
+    font-size: 11px;
     color: var(--main-color);
     background-color: var(--transparent-popup);
     border-radius: 10px;
@@ -177,5 +179,5 @@
 }
 
 .mobile-leaderboard .detailed-info-top-3 span {
-    font-size: 12px;
+    font-size: 11px;
 }

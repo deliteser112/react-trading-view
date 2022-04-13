@@ -25,7 +25,7 @@ function CryptoForex({ onHideSearch }) {
         // setInterval(setData, 2000);
         setTimeout(() => {
             setLoading(false)
-        }, 1000);
+        }, 500);
     }, [])
 
     useEffect(() => {
@@ -76,7 +76,7 @@ function CryptoForex({ onHideSearch }) {
                 <TabList>
                     <Tab onClick={() => setSelectedTab('crypto')}>Crypto</Tab>
                     <Tab onClick={() => setSelectedTab('forex')}>Forex</Tab>
-                    <Tab onClick={() => setSelectedTab('people')}>People</Tab>
+                    {/* <Tab onClick={() => setSelectedTab('people')}>People</Tab> */}
                 </TabList>
 
                 <TabPanel>

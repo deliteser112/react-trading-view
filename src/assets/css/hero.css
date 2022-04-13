@@ -580,7 +580,8 @@ span {
 
 .real-search-bar {
     position: relative;
-    background-color: var(--dark3);
+    background-color:#000000c4;
+    /* background-color: var(--dark3); */
     padding: 10px;
     width: 100%;
 }
@@ -614,7 +615,7 @@ span {
     padding: 20px;
     max-width: 500px;
     margin: auto;
-    background-color: var(--dark3);
+    background-color:#000000c4;
     margin-top: 0px;
 }
 
@@ -702,11 +703,12 @@ span {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     padding: 10px 5px;
+    transition: all .5s;
 }
 
 .search-result-box .table-row:hover {
     cursor: pointer;
-    background-color: var(--dark1);
+    background-color: var(--transparent);
 }
 
 .search-result-box .table-row span {
