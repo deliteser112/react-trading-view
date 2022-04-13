@@ -1,10 +1,10 @@
 .mobile-leaderboard {
     position: relative;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .mobile-leaderboard .tab-item {
-    margin-top: 0;
+    margin-top: 10px;
     justify-content: center;
 }
 
@@ -28,6 +28,7 @@
     text-align: left;
     color: var(--grey3);
     font-size: 13px;
+    padding: 10px
 }
 
 .mobile-leaderboard .avatar {
@@ -55,9 +56,15 @@
     background-color: var(--transparent);
 }
 
+.mobile-leaderboard .crawn-img {
+    width: 50px;
+    display: block;
+    margin: auto;
+}
+
 .mobile-leaderboard .rated-1 {
     position: absolute;
-    top: 0;
+    top: -25px;
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
@@ -79,9 +86,11 @@
     transform: translateX(-50%);
 }
 
-.mobile-leaderboard .rated-board {
-    margin-top: 110px;
+.mobile-leaderboard .rated-list {
+    margin-top: 250px;
     width: 100%;
+    background-color: var(--dark2);
+    border-radius: 30px;
 }
 
 .mobile-leaderboard .bs-icon {
