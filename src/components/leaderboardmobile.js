@@ -91,6 +91,11 @@ function LeaderBoardMobile() {
                 </div>
             </div>
 
+            <div className="your-ranking">
+                <span>Your Ranking</span>
+                <span>25</span>
+            </div>
+
             <div className="rated-list">
                 <div className="list-header">
                     <div>USER</div>

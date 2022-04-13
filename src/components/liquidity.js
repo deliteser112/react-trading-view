@@ -30,7 +30,6 @@ function Liquidity() {
             sampleArr.push(row);
         })
 
-        console.log(sampleArr);
         setSampleData(sampleArr);
     }, [])
     return (

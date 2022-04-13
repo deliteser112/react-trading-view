@@ -72,7 +72,7 @@
 
 .mobile-leaderboard .rated-2 {
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 16%;
     text-align: center;
     transform: translateX(-50%);
@@ -80,16 +80,35 @@
 
 .mobile-leaderboard .rated-3 {
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 84%;
     text-align: center;
     transform: translateX(-50%);
 }
 
+.mobile-leaderboard .your-ranking {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--transparent);
+    margin: 0 20px;
+    margin-top: 230px;
+    color: var(--grey1);
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.mobile-leaderboard .your-ranking>span:last-child {
+    background-color: var(--green);
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--light);
+}
+
 .mobile-leaderboard .rated-list {
-    margin-top: 250px;
+    margin-top: 10px;
     width: 100%;
-    background-color: var(--dark2);
+    background-color: var(--transparent);
     border-radius: 30px;
 }
 

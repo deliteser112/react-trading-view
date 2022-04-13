@@ -17,10 +17,11 @@ function Navbar({ mode, setMode, onShowSearch, onShowOverlay }) {
             r.style.setProperty('--grey3', '#000');
             r.style.setProperty('--grey2', '#333');
             r.style.setProperty('--grey1', '#555');
-            // r.style.setProperty('--rising-color', '#19a100');
+            r.style.setProperty('--rising-color', '#218d0d');
+            r.style.setProperty('--transparent', '#09090b1a');
         }
     }, [mode])
-
+    
     const handleChangeMode = (currentMode) => {
         setMode(currentMode);
         setTimeout(() => {

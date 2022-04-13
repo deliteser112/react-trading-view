@@ -107,7 +107,7 @@ span {
 .mobile-toggle-panel {
     display: block;
     position: fixed;
-    top: 50%;
+    top: 20%;
     right: 0;
     z-index: 1000;
     background-color: var(--dark1);
@@ -621,14 +621,18 @@ span {
     margin-top: 0px;
 }
 
+.search-result-box .react-tabs__tab {
+    color: lightgrey !important;
+}
+
 .react-tabs__tab {
-    color: var(--light) !important;
+    color: var(--grey1) !important;
 }
 
 .react-tabs__tab--selected {
-    background: #131722 !important;
+    background: var(--dark3) !important;
     border: none !important;
-    color: var(--light) !important;
+    color: var(--grey1) !important;
     border-bottom: 2px solid var(--grey1) !important;
 }
 

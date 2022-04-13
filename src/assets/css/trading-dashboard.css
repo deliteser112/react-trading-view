@@ -142,6 +142,9 @@
     color: #d34a4a;
 }
 
+.search-rising-color {
+    color: #3deca7;
+}
 
 .rising-color {
     color: var(--rising-color);

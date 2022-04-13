@@ -91,8 +91,8 @@ function CryptoForex({ onHideSearch }) {
                                 {filteredData.map((item, index) => 
                                     <div className="table-row" key={index}>
                                         <span className="pair-color">{item.pair}</span>
-                                        <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
-                                        <span className="rising-color">{item.hour}</span>
+                                        <span className={item.price < 131.00 ? 'fall-color' : 'search-rising-color'}>{item.price}</span>
+                                        <span className="search-rising-color">{item.hour}</span>
                                     </div>
                                 )}
                             </div>
@@ -110,8 +110,8 @@ function CryptoForex({ onHideSearch }) {
                         {filteredData.map((item, index) => 
                             <div className="table-row" key={index}>
                                 <span className="pair-color">{item.pair}</span>
-                                <span className={item.price < 131.00 ? 'fall-color' : 'rising-color'}>{item.price}</span>
-                                <span className="rising-color">{item.hour}</span>
+                                <span className={item.price < 131.00 ? 'fall-color' : 'search-rising-color'}>{item.price}</span>
+                                <span className="search-rising-color">{item.hour}</span>
                             </div>
                         )}
                     </div>
