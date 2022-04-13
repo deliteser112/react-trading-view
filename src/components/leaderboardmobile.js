@@ -93,7 +93,11 @@ function LeaderBoardMobile() {
 
             <div className="your-ranking">
                 <span>Your Ranking</span>
-                <span>25</span>
+                <div>
+                    <span> 25</span>
+                    <span>PNL: </span>
+                    <span className="pnl-color">+352% </span>
+                </div>
             </div>
 
             <div className="rated-list">

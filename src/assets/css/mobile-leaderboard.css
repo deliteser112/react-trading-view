@@ -94,15 +94,16 @@
     margin-top: 230px;
     color: var(--grey1);
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 20px;
 }
 
-.mobile-leaderboard .your-ranking>span:last-child {
+.mobile-leaderboard .your-ranking>div>span:first-child {
     background-color: var(--green);
     padding: 10px;
     border-radius: 50%;
     color: var(--light);
+    margin-right: 10px;
 }
 
 .mobile-leaderboard .rated-list {

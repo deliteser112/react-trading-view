@@ -38,7 +38,7 @@
     --dark2: #1f2430;
     --dark3: #131722;
     --transparent: #09090b50;
-    --transparent-popup: #09090baf;
+    --transparent-popup: #000000e0;
     --shadow: var(--dark3);
     --border-color: var(--dark1);
     --rising-color: #3deca7;
@@ -586,16 +586,20 @@ span {
     width: 100%;
     top: -2px;
 }
+
+.search-input::before {
+    content: url('/icons/search-icon.png') !important
+}
 .search-input {
     border: 1px solid var(--border-color);
     border-radius: 30px;
     max-width: 500px;
     margin-right: 40px;
-    background-color: var(--dark3);
+    background-color: var(--transparent);
 }
 
 .search-input>input {
-    background-color: var(--dark3);
+    background-color: var(--transparent);
     color: var(--grey3);
     padding: 5px 10px 5px 35px !important;
 }
