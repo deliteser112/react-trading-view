@@ -520,7 +520,7 @@ span {
 
 .search-input>input {
     background-color: var(--transparent);
-    color: var(--grey3);
+    color: var(--light);
     padding: 5px 10px 5px 35px !important;
 }
 
@@ -542,7 +542,7 @@ span {
     margin: auto;
     background-color: var(--transparent-popup);
     /* background-color:#000000c4; */
-    margin-top: 0px;
+    margin-top: -2px;
 }
 
 .search-result-box .react-tabs__tab {
