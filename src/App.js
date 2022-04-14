@@ -13,6 +13,7 @@ import CryptoForex from "./components/cryptoforex";
 
 import PopupOverlay from "./components/popupoverlay";
 import LongShortButton from "./components/longshortbutton";
+import LowBalanceOverlay from "./components/mobile-view/LowBalanceOverlay"
 
 import OpenTrads from "./components/opentrades";
 import OpenOrders from "./components/openorders";
@@ -37,22 +38,26 @@ function App() {
 
   const [showSearch, setShowSearch] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
+  const [showLowBalanceOverlay, setShowLowBalanceOverlay] = useState(false);
 
   const [showLongShort, setShowLongShort] = useState(false);
 
   const handleShowLongShort = () => {
     setShowLongShort(true);
+    setShowLowBalanceOverlay(true);
     bottomRef.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
   }
-
+  // onHidePaymentOverlay
   return (
     <div>
       <Navbar mode={darkMode} setMode={setDarkMode} onShowSearch={() => setShowSearch(true)} onShowOverlay={() => setShowOverlay(true)} />
       {showSearch && <CryptoForex onHideSearch={() => setShowSearch(false)} />}
       {showOverlay && <PopupOverlay onHideOverlay={() => setShowOverlay(false)} />}
+      {showLowBalanceOverlay && <LowBalanceOverlay onHidePaymentOverlay={() => setShowLowBalanceOverlay(false)}/>}
+
       <div className="trading-panel row">
         <Chart mode={darkMode}/>
         <LongShort mode={darkMode} />

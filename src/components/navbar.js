@@ -39,7 +39,6 @@ function Navbar({ mode, setMode, onShowSearch, onShowOverlay }) {
                 </div>
             </div>
             <div className={`navbar ${mode? 'dark': 'light'}`}>
-                {/* <FaUserCircle className="mobile-view-icons" /> */}
                 <img src="/icons/profile.svg" alt="profile" className="mobile-view-icons" onClick={() => onShowOverlay(true)} />
                 <div className="navbar-left">
                     <div className="navbar-logo" onClick={() => onShowSearch(true)}>
@@ -77,27 +76,6 @@ function Navbar({ mode, setMode, onShowSearch, onShowOverlay }) {
                         </div>
                     }
                 </div>
-                {/* <FaPowerOff className="mobile-view-icons" /> */}
-                {/* {isShow ? <FaTimes className="hamburger" onClick={() => setIsShow(!isShow)} /> : <FaBars className="hamburger" onClick={() => setIsShow(!isShow)} />} */}
-
-                {/* <ul className={`mobile-navbar ${isShow?'show':'hide'}`}>
-                    <li><a className="menu-link" href="/decentralized-trading/">Platform</a></li>
-                    <li><a className="menu-link" href="/decentralized-trading/">Practice</a></li>
-                    <li><a className="menu-link" href="/decentralized-trading/">Staking</a></li>
-                    <li><a className="menu-link" href="/decentralized-trading/">Statistics</a></li>
-                    <li><a className="menu-link" href="/decentralized-trading/">Documentation</a></li>
-                    <li>
-                        <a className="button btn-pink menu-link" href="/decentralized-trading/">Buy $LVRJ" <FaExchangeAlt className="reg-circle-icon" /></a>
-                    </li>
-                    <li>
-                        <a className="button btn-pink menu-link" href="/decentralized-trading/">Connect Wallet <FaPowerOff className="reg-circle-icon" /></a>
-                    </li>
-                    <li>
-                        <div className="toggle-button-group">
-                            <span>Dark Mode</span> <Switch onChange={() => handleChangeMode(!mode)} checked={mode} />
-                        </div>
-                    </li>
-                </ul> */}
             </div>
         </div>
         

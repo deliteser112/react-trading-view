@@ -107,3 +107,59 @@
     font-size: 186%;
     color: var(--green)
 }
+
+
+/* payment card */
+.popup .payment-card {
+    background-color: var(--dark2);
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.popup .invoice-icon {
+    border-radius: 50%;
+    width: 100px;
+    margin-top: -50px;
+}
+
+.popup .option-row {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    align-items: center;
+    border: 1px solid var(--dark1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all .5s;
+}
+
+.popup .option-row:hover {
+    background-color: var(--transparent);
+}
+
+.popup .option-row img {
+    margin-right: 10px;
+    width: 50px;
+}
+
+.popup .option-row span {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
