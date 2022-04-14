@@ -1,7 +1,7 @@
 import React from "react";
 
-import ArrowUp from '../assets/arrow-up.svg';
-import ArrowDown from '../assets/arrow-down.svg';
+import ArrowUp from '../../assets/arrow-up.svg';
+import ArrowDown from '../../assets/arrow-down.svg';
 
 function LongShortButton({ onShowLongShort }) {
   return (

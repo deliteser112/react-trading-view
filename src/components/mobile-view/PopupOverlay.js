@@ -1,7 +1,7 @@
 import React from "react";
 import {AiOutlineClose} from "react-icons/ai"
 
-import area_graph from '../assets/Vector.svg';
+import area_graph from '../../assets/Vector.svg';
 
 function PopupOverlay({ onHideOverlay }) {
     return (

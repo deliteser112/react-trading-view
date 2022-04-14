@@ -1,7 +1,7 @@
 /* eslint-disable array-callback-return */
 import React, {useState} from "react";
 
-import { leaderboard } from "../assets/real-time.json";
+import { leaderboard } from "../../assets/real-time.json";
 
 function LeaderBoardMobile() {
     const [short, setShort] = useState(false);

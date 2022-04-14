@@ -1,36 +1,33 @@
 import React, { useState, useContext, useRef } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
-// import icons
-// import {GiSuperMushroom, GiCampfire, GiTakeMyMoney} from "react-icons/gi"
-// import {MdAutoGraph} from "react-icons/md"
 
 // import components
-import Chart from "./components/chart";
-import Navbar from "./components/navbar";
-import LongShort from "./components/longshort";
-import CryptoForex from "./components/cryptoforex";
+import Chart from "./components/Chart";
+import Navbar from "./components/Navbar";
+import LongShort from "./components/LongShort";
+import CryptoForex from "./components/CryptoForex";
 
-import PopupOverlay from "./components/popupoverlay";
-import LongShortButton from "./components/longshortbutton";
+import PopupOverlay from "./components/mobile-view/PopupOverlay";
+import LongShortButton from "./components/mobile-view/LongShortButton";
 import LowBalanceOverlay from "./components/mobile-view/LowBalanceOverlay"
 
-import OpenTrads from "./components/opentrades";
-import OpenOrders from "./components/openorders";
+import OpenTrads from "./components/OpenTrades";
+import OpenOrders from "./components/OpenOrders";
 
-import MediumSection from "./components/mediumsection";
+import MediumSection from "./components/MediumSection";
 
-import AllTrades from "./components/alltrades";
-import LeaderBoard from "./components/leaderboard";
-import PersonalTrading from "./components/personaltrading";
+import AllTrades from "./components/AllTrades";
+import LeaderBoard from "./components/LeaderBoard";
+import PersonalTrading from "./components/PersonalTrading";
 
-import NFTOrders from "./components/nftorders";
+import NFTOrders from "./components/NFTOrders";
 
-import Liquidity from "./components/liquidity";
+import Liquidity from "./components/Liquidity";
 
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
-import LeaderBoardMobile from "./components/leaderboardmobile";
+import LeaderBoardMobile from "./components/mobile-view/LeaderBoardMobile";
 
 function App() {
   const bottomRef = useRef();

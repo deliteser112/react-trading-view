@@ -4,7 +4,7 @@ import {GiElephant, GiChicken} from "react-icons/gi"
 import {liquidity} from "../assets/real-time.json";
 
 // components
-import Profile from "./profile";
+import Profile from "./Profile";
 
 function Liquidity() {
     const [sampleData, setSampleData] = useState([]);
