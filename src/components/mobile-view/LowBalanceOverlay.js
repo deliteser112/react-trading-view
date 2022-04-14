@@ -1,8 +1,6 @@
 import React from "react";
 import {AiOutlineClose} from "react-icons/ai"
 
-import area_graph from '../../assets/Vector.svg';
-
 function LowBalanceOverlay({ onHidePaymentOverlay }) {
     return (
         <div className="popup">
@@ -23,7 +21,7 @@ function LowBalanceOverlay({ onHidePaymentOverlay }) {
               </div> 
               <div className="btn btn-deposit" style={{ margin: 'auto', color: 'white' }}>GO!</div>
             </div>
-            <img src={area_graph} alt="area_2" className="mini-chart" />
+            <img src="/icons/payment-back.png" alt="area_2" className="mini-chart" />
         </div>
     );
 }

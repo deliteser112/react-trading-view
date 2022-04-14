@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // import styling
+import "./assets/css/common.css";
 import "./assets/css/hero.css";
 import "./assets/css/navbar.css";
 import "./assets/css/trading-view.css";

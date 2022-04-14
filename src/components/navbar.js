@@ -20,6 +20,7 @@ function Navbar({ mode, setMode, onShowSearch, onShowOverlay }) {
             r.style.setProperty('--grey1', '#555');
             r.style.setProperty('--rising-color', '#218d0d');
             r.style.setProperty('--transparent', '#09090b1a');
+            r.style.setProperty('--transparent-payment', '#ffffffc2');
         }
     }, [mode])
     
