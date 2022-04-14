@@ -629,6 +629,13 @@ span {
     color: lightgrey !important;
 }
 
+.search-result-box .react-tabs__tab--selected {
+    background: var(--transparent) !important;
+    border: none !important;
+    color: var(--light) !important;
+    border-bottom: 2px solid var(--grey1) !important;
+}
+
 .react-tabs__tab {
     color: var(--grey1) !important;
 }

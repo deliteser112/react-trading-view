@@ -2,7 +2,7 @@
     position: absolute;
     top: 63px;
     left: 0;
-    z-index: 109;
+    z-index: 1;
     width: 100%;
     height: calc(100% - 125px);
     background-color: var(--dark3);

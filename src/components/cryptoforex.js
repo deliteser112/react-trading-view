@@ -117,7 +117,7 @@ function CryptoForex({ onHideSearch }) {
                     </div>
                 </TabPanel>
 
-                <TabPanel>
+                {/* <TabPanel>
                     <div className="people-section">
                         {filteredData.map((item, index) => 
                             <div className="people-row" key={index}>
@@ -126,7 +126,7 @@ function CryptoForex({ onHideSearch }) {
                             </div>
                         )}
                     </div>
-                </TabPanel>
+                </TabPanel> */}
             </Tabs>
         </div>
     );

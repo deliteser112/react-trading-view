@@ -8,6 +8,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 function Navbar({ mode, setMode, onShowSearch, onShowOverlay }) {
 
     const [isShow, setIsShow] = useState(false);
+    const [showTip, setShowTip] = useState(false);
     useEffect(() => {
         const r = document.querySelector(':root');
         if (!mode) {
@@ -67,7 +68,15 @@ function Navbar({ mode, setMode, onShowSearch, onShowOverlay }) {
                         <a className="button btn-pink" href="/decentralized-trading/">Connect Wallet <FaPowerOff className="reg-circle-icon" /></a>
                     </li>
                 </ul>
-                <img src="/icons/wallet.svg" alt="profile" className="mobile-view-icons" />
+                <div className="wallet-icon" onMouseOver={() => setShowTip(true)} onMouseLeave={() => setShowTip(false)}>
+                    <img src="/icons/wallet.svg" alt="profile" className="mobile-view-icons" />
+                    <div className="low-balance-dot" />
+                    {showTip && 
+                        <div className="dropdown-push">
+                            <span role="img" aria-label="Fire">⚠️ Your DAI wallet balance is below $10</span>
+                        </div>
+                    }
+                </div>
                 {/* <FaPowerOff className="mobile-view-icons" /> */}
                 {/* {isShow ? <FaTimes className="hamburger" onClick={() => setIsShow(!isShow)} /> : <FaBars className="hamburger" onClick={() => setIsShow(!isShow)} />} */}
 
