@@ -3,32 +3,32 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
 
 // import components
-import Chart from "./components/Chart";
-import Navbar from "./components/Navbar";
-import LongShort from "./components/LongShort";
-import CryptoForex from "./components/CryptoForex";
+// import Chart from "./components/Chart";
+// import Navbar from "./components/Navbar";
+// import LongShort from "./components/LongShort";
+// import CryptoForex from "./components/CryptoForex";
 
-import PopupOverlay from "./components/mobile-view/PopupOverlay";
-import LongShortButton from "./components/mobile-view/LongShortButton";
-import LowBalanceOverlay from "./components/mobile-view/LowBalanceOverlay"
-import Liquidity from "./components/mobile-view/Liquidity";
-import ActivityMobile from "./components/mobile-view/ActivityMobile";
+// import PopupOverlay from "./components/mobile-view/PopupOverlay";
+// import LongShortButton from "./components/mobile-view/LongShortButton";
+// import LowBalanceOverlay from "./components/mobile-view/LowBalanceOverlay"
+// import Liquidity from "./components/mobile-view/Liquidity";
+// import ActivityMobile from "./components/mobile-view/ActivityMobile";
 
-import OpenTrads from "./components/OpenTrades";
-import OpenOrders from "./components/OpenOrders";
+// import OpenTrads from "./components/OpenTrades";
+// import OpenOrders from "./components/OpenOrders";
 
-import MediumSection from "./components/MediumSection";
+// import MediumSection from "./components/MediumSection";
 
-import AllTrades from "./components/AllTrades";
-import LeaderBoard from "./components/LeaderBoard";
-import PersonalTrading from "./components/PersonalTrading";
+// import AllTrades from "./components/AllTrades";
+// import LeaderBoard from "./components/LeaderBoard";
+// import PersonalTrading from "./components/PersonalTrading";
 
-import NFTOrders from "./components/NFTOrders";
+// import NFTOrders from "./components/NFTOrders";
 
 
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
-import LeaderBoardMobile from "./components/mobile-view/LeaderBoardMobile";
+// import LeaderBoardMobile from "./components/mobile-view/LeaderBoardMobile";
 
 function App() {
   const bottomRef = useRef();
