@@ -1,11 +1,11 @@
 import React from "react";
 import {AiOutlineClose} from "react-icons/ai"
 
-import area_graph from '../../assets/Vector.svg';
+// import area_graph from '../../assets/Vector.svg';
 
 function PopupOverlay({ onHideOverlay }) {
     return (
-        <div className="popup">
+        <div className="popup transparent">
             <div className="popup-header">
                 <AiOutlineClose onClick={onHideOverlay} className="popup-close" />
             </div>
@@ -20,11 +20,10 @@ function PopupOverlay({ onHideOverlay }) {
                 </div>
             </div> */}
 
-            <div className="intro-section">
-                <span className="large-label">$42.46</span>
-            </div>
-
-            <div className="popup-card">
+            <div className="payment-card p-10">
+                <div className="intro-section">
+                    <span className="large-label">$42.46</span>
+                </div>
                 <div className="trade-info flex-start">
                     <img src="/icons/status.png" alt="lvrj" className="tab-button-icon" /> <h4>My Stats</h4>
                 </div>
@@ -51,7 +50,7 @@ function PopupOverlay({ onHideOverlay }) {
                     <div className="btn btn-deposit">Deposit</div>
                 </div> */}
             </div>
-            <img src={area_graph} alt="area_2" className="mini-chart" />
+            {/* <img src={area_graph} alt="area_2" className="mini-chart" /> */}
         </div>
     );
 }

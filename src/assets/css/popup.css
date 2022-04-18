@@ -106,6 +106,7 @@
 
 .popup .intro-section .large-label {
     font-size: 186%;
+    font-family: cursive;
     color: var(--green)
 }
 
@@ -156,7 +157,9 @@
     font-size: 16px;
 }
 
-
+.popup .payment-card.p-10 {
+    padding: 20px;
+}
 
 
 

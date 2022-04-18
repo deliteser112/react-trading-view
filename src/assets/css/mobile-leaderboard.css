@@ -1,6 +1,7 @@
 .mobile-leaderboard {
     position: relative;
     /* padding: 15px; */
+    padding-top: 10px;
 }
 
 .mobile-leaderboard .tab-item {

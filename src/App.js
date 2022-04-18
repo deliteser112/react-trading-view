@@ -11,6 +11,8 @@ import CryptoForex from "./components/CryptoForex";
 import PopupOverlay from "./components/mobile-view/PopupOverlay";
 import LongShortButton from "./components/mobile-view/LongShortButton";
 import LowBalanceOverlay from "./components/mobile-view/LowBalanceOverlay"
+import Liquidity from "./components/mobile-view/Liquidity";
+import ActivityMobile from "./components/mobile-view/ActivityMobile";
 
 import OpenTrads from "./components/OpenTrades";
 import OpenOrders from "./components/OpenOrders";
@@ -23,7 +25,6 @@ import PersonalTrading from "./components/PersonalTrading";
 
 import NFTOrders from "./components/NFTOrders";
 
-import Liquidity from "./components/Liquidity";
 
 import Footer from "./components/Footer";
 
@@ -97,10 +98,7 @@ function App() {
           </TabPanel>
           <TabPanel>
             <div className="mobile-tab-body">
-              <div className="trading-container">
-                <OpenTrads />
-                <OpenOrders />
-              </div>
+              <ActivityMobile />
             </div>
           </TabPanel>
           <TabPanel>

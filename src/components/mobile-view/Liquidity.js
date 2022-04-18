@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import {AiOutlinePlus, AiOutlineMinus, AiOutlineInfoCircle} from "react-icons/ai"
 import {GiElephant, GiChicken} from "react-icons/gi"
-import {liquidity} from "../assets/real-time.json";
+import {liquidity} from "../../assets/real-time.json";
 
 // components
-import Profile from "./Profile";
+import Profile from "../Profile";
 
 function Liquidity() {
     const [sampleData, setSampleData] = useState([]);
