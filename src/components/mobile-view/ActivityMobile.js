@@ -4,15 +4,15 @@ import React, {useState} from "react";
 import OpenTrads from "../OpenTrades";
 import OpenOrders from "../OpenOrders";
 
-import { leaderboard } from "../../assets/real-time.json";
+// import { leaderboard } from "../../assets/real-time.json";
 
 function ActivityMobile() {
     const [short, setShort] = useState(false);
     const [long, setLong] = useState(true);
 
-    const [listData, setListData] = useState(leaderboard);
+    // const [listData, setListData] = useState(leaderboard);
 
-    const [showTip, setShowTip] = useState(0);
+    // const [showTip, setShowTip] = useState(0);
 
     const handleTab = (isSelected) => {
         if(isSelected === 'long') {
@@ -24,26 +24,26 @@ function ActivityMobile() {
         }
     }
 
-    const handleExpandItem = (index) => {
-        const tmpList = [];
-        listData.map((item, i) => {
-            if (i === index) {
-                const { expanded } = item;
-                tmpList.push({...item, expanded: !expanded});
-            } else {
-                tmpList.push(item);
-            }
-        });
-        setListData(tmpList);
-    }
+    // const handleExpandItem = (index) => {
+    //     const tmpList = [];
+    //     listData.map((item, i) => {
+    //         if (i === index) {
+    //             const { expanded } = item;
+    //             tmpList.push({...item, expanded: !expanded});
+    //         } else {
+    //             tmpList.push(item);
+    //         }
+    //     });
+    //     setListData(tmpList);
+    // }
 
-    const handleShowTip = (tip) => {
-        if (tip === showTip) {
-            setShowTip(0)
-        } else {
-            setShowTip(tip)
-        }
-    }
+    // const handleShowTip = (tip) => {
+    //     if (tip === showTip) {
+    //         setShowTip(0)
+    //     } else {
+    //         setShowTip(tip)
+    //     }
+    // }
 
     return (
         <div className="mobile-leaderboard">
