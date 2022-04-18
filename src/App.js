@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ThemeContext } from './contexts/ThemeContext';
 
 // import components
-// import Chart from "./components/Chart";
+import Chart from "./components/Chart";
 import Navbar from "./components/Navbar";
 import LongShort from "./components/LongShort";
 import CryptoForex from "./components/CryptoForex";
@@ -57,7 +57,7 @@ function App() {
       {showLowBalanceOverlay && <LowBalanceOverlay onHidePaymentOverlay={() => setShowLowBalanceOverlay(false)}/>}
 
       <div className="trading-panel row">
-        {/* <Chart mode={darkMode}/> */}
+        <Chart mode={darkMode}/>
         <LongShort mode={darkMode} />
       </div>
       <div className="trading-container">
@@ -87,7 +87,7 @@ function App() {
           <TabPanel>
             <div className="mobile-tab-body" style={{ overflow: `${showLongShort ? 'auto' : 'hidden'}` }}>
               <div className="trading-panel row">
-                {/* <Chart mode={darkMode}/> */}
+                <Chart mode={darkMode}/>
                 {showLongShort && <LongShort mode={darkMode} />}
                 {!showLongShort && 
                   <LongShortButton onShowLongShort={handleShowLongShort} />
