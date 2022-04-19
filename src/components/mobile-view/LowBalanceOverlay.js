@@ -9,7 +9,6 @@ function LowBalanceOverlay({ onHidePaymentOverlay }) {
             </div>
 
             <div className="payment-card">
-              {/* <img src="/icons/invoice.png" alt="invoice" className="invoice-icon" /> */}
               <h3 style={{ fontWeight: 100 }}>Oops! Low wallet DAI Balance, buy DAI instantly!</h3>
               <div className="option-row">
                 <img src="/icons/bank.png" alt="bank" />
@@ -21,7 +20,6 @@ function LowBalanceOverlay({ onHidePaymentOverlay }) {
               </div> 
               <div className="btn btn-deposit" style={{ margin: 'auto', color: 'white' }}>GO!</div>
             </div>
-            {/* <img src="/icons/payment-back.png" alt="area_2" className="mini-chart" /> */}
         </div>
     );
 }
